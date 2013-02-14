@@ -1,0 +1,158 @@
+/* ## Bring in all Compass Helpers */ 
+@import "partials/base";
+
+/* ## Base CSS */
+@import "project/type";
+// @import "project/forms";
+// @import "project/tables";
+// @import "project/lists";
+
+/* ## Components */
+// @import "project/buttons";
+// @import "project/dropdowns";
+// @import "project/tabs";
+// @import "project/modals";
+// @import "project/tooltips";
+
+/* ============================================= */
+/*	Universal						   			 */ 
+/* ============================================= */
+
+a 		{ 	text-decoration: none; color: inherit; }
+strong	{	font-weight: bold;	}
+em   	{	font-style: italic;	}
+
+body { background-color: $light-green; }
+
+.inline { display: inline; }
+
+
+/* ============================================= */
+/*	Universal Elements					   			 */ 
+/* ============================================= */
+
+button {
+	background-color: darken($dark-green, 5%);
+	color: $black-10;
+	@include border-radius(5px 5px);
+	border: none;
+	&:hover { background-color: $dark-green; }
+	&.big-btn {
+		padding: 15px 30px;
+		@extend .adelle-bold;
+		font-size: 16px;
+	}
+}
+
+
+
+/* ============================================= */
+/*	Big Picture Layout					   		*/ 
+/* ============================================= */ 
+
+#container {
+	width: 100%;
+	min-width: 768px;
+	max-width: 960px;
+	margin: 0 auto;
+	//background-color: white;
+}
+
+
+//@extend element
+.mod {
+	margin: 30px 0px;
+	padding: 0 15px;
+}
+
+
+/* ============================================= */
+/*	Header					   		*/ 
+/* ============================================= */ 
+
+header {
+	margin: 20px 0;
+	.logo {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+/* ============================================= */
+/*	Page Sections					   		*/ 
+/* ============================================= */
+
+.explainer-mod {
+	@extend .mod;
+	background-color: $med-green;
+	min-height: 200px;
+}
+
+.intro-mod {
+	@extend .mod;
+}
+
+.faq-mod {
+	@extend .mod;
+	@include media-grid(3, 20px);
+}
+
+.code-mod {
+	@extend .mod;
+	@include ui-grid-2(50%,50%,1%);
+	.ui-block {
+		background-color: $black-90;
+		color: $black-10;
+		font-size: 15px;
+		min-height: 400px;
+		padding: 10px;
+		@extend .inconsolata;
+	}
+}
+
+.download-mod {
+	@extend .mod;
+}
+
+
+/* ============================================= */
+/*	Footer			   		*/ 
+/* ============================================= */ 
+
+footer {
+	@extend .mod;
+	@include ui-grid-3;
+}
+
+.social-icons {
+	font-size: 25px;
+	text-align: right;
+	a {
+		color: $dark-green;
+		&:hover { 
+			color: $med-green;
+		}
+	}
+}
+
+
+/* ============================================= */
+/*	Other Elements				   		*/ 
+/* ============================================= */ 
+
+.twitter-share-button {
+	margin-left: 5px;
+}
+
+
+/* ============================================= */
+/*	Print Styles							     
+	Inline to avoid required HTTP connection     */
+/* ============================================= */
+
+// Import Print Styles
+@import "project/print";
+
+
+
