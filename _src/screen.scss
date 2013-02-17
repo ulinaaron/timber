@@ -198,7 +198,7 @@ code {
 	margin: 20px;
 	float: left;
 
-	background-image: url(/_img/ex-arrow-two.png);
+	background-image: url(../_img/ex-arrow-two.png);
 }
 
 
@@ -233,7 +233,7 @@ code {
 		@extend .inconsolata;
 	}
 
-	background-image: url(/_img/code-arrow.png);
+	background-image: url(../_img/code-arrow.png);
 	background-repeat: no-repeat;
 	background-position: center center;
 }
