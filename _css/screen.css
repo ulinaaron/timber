@@ -350,16 +350,16 @@ button {
 /*	Typography						 			  */
 /* ---------------------------------------------- */
 /* !-- Typefaces ------------------------------------ */
-.adelle-bold, .section-h, .block-h, button.big-btn {
+.adelle-bold, .section-h, .block-h, button.big-btn, .ex-small {
   font-family: "adelle", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-.open-light, .section-txt, .label, p {
+.open-light, .section-txt, .label, p, .ex-h1 {
   font-family: "open-sans", Arial, Helvetica, sans-serif;
   font-weight: 300;
 }
 
-.open-reg {
+.open-reg, .ex-p {
   font-family: "open-sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
 }
@@ -411,6 +411,7 @@ button {
 p {
   font-size: 16px;
   line-height: 150%;
+  margin-bottom: 20px;
 }
 
 /* ## Components */
@@ -469,7 +470,7 @@ button.big-btn {
   margin: 0 auto;
 }
 
-.mod, .explainer-mod, .intro-mod, .faq-mod, .code-mod, .download-mod, footer {
+.mod, .intro-mod, .faq-mod, .code-mod, .download-mod, .footer-container {
   margin: 30px 0px;
   padding: 0 15px;
 }
@@ -489,8 +490,94 @@ header .logo {
 /*	Page Sections					   		*/
 /* ============================================= */
 .explainer-mod {
-  background-color: #6ab25e;
-  min-height: 200px;
+  border-bottom: 20px;
+  *zoom: 1;
+}
+.explainer-mod:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ex-code-mod {
+  width: 35%;
+  height: 200px;
+  margin-top: -10px;
+  margin-right: -5%;
+  background-color: rgba(0, 0, 0, 0.85);
+  float: right;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 5px 5px 5px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.75) 5px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.75) 5px 5px 5px;
+}
+
+.ex-code-out {
+  width: 70%;
+  height: 400px;
+  background-color: #FFF;
+  border: 8px solid #EEE;
+  padding: 60px;
+  float: right;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.ex-code-arrow {
+  width: 240px;
+  height: 150px;
+  margin: 20px;
+  float: left;
+  background-color: #CCC;
+}
+
+.ex-h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.ex-small {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.ex-img {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.ex-img img {
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  border: 4px solid #EEE;
+}
+
+.ex-p {
+  margin-left: 95px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+code {
+  color: #5cbb4d;
+}
+
+.code-white {
+  color: #FFF;
 }
 
 .faq-mod {
@@ -516,6 +603,9 @@ header .logo {
 
 .code-mod {
   *zoom: 1;
+  background-image: url(/_img/code-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .code-mod:after {
   content: "";
@@ -524,14 +614,14 @@ header .logo {
 }
 .code-mod > .ui-block-1,
 .code-mod > .ui-block.first {
-  width: 49.5%;
+  width: 45%;
   display: inline;
   float: left;
-  margin-right: 1%;
+  margin-right: 10%;
 }
 .code-mod > .ui-block-2,
 .code-mod > .ui-block.second {
-  width: 49.5%;
+  width: 45%;
   display: inline;
   float: left;
   margin-right: 0;
@@ -548,29 +638,38 @@ header .logo {
 /*	Footer			   		*/
 /* ============================================= */
 footer {
+  background-color: #6ab25e;
+  min-height: 200px;
+  border-top: 1px dashed #cde6c1;
+}
+
+.footer-container {
+  margin: 0 auto;
+  min-width: 768px;
+  max-width: 960px;
   *zoom: 1;
 }
-footer:after {
+.footer-container:after {
   content: "";
   display: table;
   clear: both;
 }
-footer > .ui-block-1,
-footer > .ui-block.first {
+.footer-container > .ui-block-1,
+.footer-container > .ui-block.first {
   width: 32.167%;
   display: inline;
   float: left;
   margin-right: 1.75%;
 }
-footer > .ui-block-2,
-footer > .ui-block.second {
+.footer-container > .ui-block-2,
+.footer-container > .ui-block.second {
   width: 32.167%;
   display: inline;
   float: left;
   margin-right: 1.75%;
 }
-footer > .ui-block-3,
-footer > .ui-block.last {
+.footer-container > .ui-block-3,
+.footer-container > .ui-block.last {
   width: 32.167%;
   display: inline;
   float: left;

@@ -30,6 +30,10 @@
 	<script type="text/javascript" src="//use.typekit.net/tgb0qri.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+	<!-- twitter init -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
 </head>
 
 
@@ -42,22 +46,46 @@
 
 	<div id="container">
 		<header>
-			<img class="logo" src="http://placehold.it/550x150">
+			<img class="logo" src="_img/timber-logo.png" />
 			<a href="#"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+				<button class="big-btn"><a href="#">Download Source</a></button>
+				<button class="big-btn"><a href="#" >View on GitHub</a></button>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because Wordpress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
+
 		</header>
 		<div id="main" role="main">
 
-			<section class="explainer-mod">
-				<button class="big-btn"><a href="#">Download Source</a></button>
-				<button class="big-btn"><a href="#" >View on GitHub</a></button>
-			</section><!--explainer-mod-->
-
 			<section class="intro-mod">
 				<h2 class="section-h inline">Because Wordpress is awesome, but the _loop isn't.</h2>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because Wordpress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				<h3 class="section-txt">Timber is a Wordpress theme that uses the <a href="#">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the Wordpress model, while a single.html file can focus 100% on the HTML view.</h3>
 			</section><!--explainer-mod-->
+
+			<section class="explainer-mod">
+				<div class="ex-code-out">
+					<div class="ex-h1">Write better templates</div>
+					<div class="ex-small">By Jared Novack</div>
+					<div class="ex-img"><img src="_img/jared-photo.png"/></div>
+					<div class="ex-p"><p>Timber is a Wordpress theme that uses the <a href="#">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the Wordpress model, while a single.html file can focus 100% on the HTML view.</p>
+					<p>Timber is a Wordpress theme that uses the <a href="#">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the Wordpress model, while a single.html file can focus 100% on the HTML view.</p></div>
+				</div>
+
+				<div class="ex-code-mod">
+					<pre><code>
+						&lt;article&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.title }}</span>&lt;/h1&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author }}</span>&lt;/small&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="code-white">{{ post.img }}</span>" /&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<span class="code-white">{{ post.content }}</span>&lt;/p&gt;
+						&lt;/article&gt;
+					</code></pre>
+				</div>
+
+				<div class="ex-code-arrow"></div>
+
+			</section><!--explainer-mod-->
+
+
 
 			<section class="faq-mod">
 				<div class="media-block">
@@ -90,7 +118,10 @@
 			</section>
 
 		</div><!--eo main-->
-		<footer>
+	</div> <!-- eo #container -->
+
+	<footer>
+		<div class="footer-container">
 			<div class="ui-block-1">
 				<h5 class="label">Developed by your friends at</h5>
 			</div>
@@ -101,8 +132,8 @@
 				<a href="#">twitter</a>
 				<a href="#">mail</a>
 			</div>
-		</footer>
-	</div> <!-- eo #container -->
+		</div>
+	</footer>
 
 
 
