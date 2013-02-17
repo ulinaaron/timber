@@ -63,9 +63,19 @@
 }
 
 .label {
-	font-size: 13px;
-	text-transform: uppercase;
-	@extend .open-light;
+	font-size: 14px;
+	line-height: 18px;
+	color: darken($dark-green, 10%);
+	// text-transform: uppercase;
+	@extend .open-reg;
+
+	a {
+		color: $light-green;
+		&:hover {
+			color: $dark-green;
+		}
+	}
+
 	&.ss {
 		padding-left: 10px;
 	}

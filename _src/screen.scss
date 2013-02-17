@@ -32,11 +32,13 @@ body { background-color: $light-green; }
 /* ============================================= */
 
 button {
-	background-color: darken($dark-green, 5%);
+	@include background-image(linear-gradient($bright-green, $dark-green));
 	color: $black-10;
 	@include border-radius(5px 5px);
-	border: none;
+	border: 1px solid $dark-green;
+
 	&:hover { background-color: $dark-green; }
+	
 	&.big-btn {
 		padding: 15px 30px;
 		@extend .adelle-bold;
@@ -78,11 +80,19 @@ header {
 	}
 }
 
+.descrip {
+	@extend .open-reg;
+	font-size: 16px;
+	text-align: center;
+}
+
 .buttons {
 	max-width: 960px;
 	margin: 0 auto 20px auto;
 	padding: 10px;
 	background-color: darken($light-green, 10%);
+	border-right: 1px dashed $light-green;
+	border-left: 1px dashed $light-green;
 	@include pie-clearfix;
 }
 
@@ -117,7 +127,7 @@ nav {
 	background-color: rgba(0,0,0,.85);
 	float: right;
 	@include border-radius(8px);
-	@include box-shadow(rgba(0,0,0,.75) 5px 5px 5px);
+	@include box-shadow(rgba(0,0,0,.4) 5px 5px 5px);
 	@include trans;
 
 	&:hover {
@@ -192,11 +202,18 @@ code {
 .intro-mod {
 	@extend .mod;
 	margin-bottom: 60px;
+	padding: 10px 12% 10px 12%;
 }
 
 .faq-mod {
 	@extend .mod;
-	@include media-grid(3, 40px);
+	margin: 40px 0 40px 0;
+	padding: 10px 12% 10px 12%;
+
+	.media-block {
+		margin: 0 0 25px 0;
+	}
+	// @include media-grid(3, 40px);
 }
 
 .code-mod {
@@ -231,6 +248,7 @@ footer {
 	background-color: $med-green;
 	min-height: 200px;
 	border-top: 1px dashed $light-green;
+	@include box-shadow($dark-green 0px 5px 10px inset);
 }
 
 .footer-container {
@@ -238,10 +256,15 @@ footer {
 	padding-top: 30px;
 	min-width: 768px;
 	max-width: 960px;
-	@include ui-grid-3;
+	@include ui-grid-3(40%, 40%, 20%, 5%);
 	@extend .mod;
 }
 
+.ups-logo {
+	width: 100%;
+	margin: 60px 0 0 0;
+	text-align: center;
+}
 .social-icons {
 	font-size: 25px;
 	text-align: right;
