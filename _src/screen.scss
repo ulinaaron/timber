@@ -78,7 +78,26 @@ header {
 	}
 }
 
+.buttons {
+	max-width: 960px;
+	margin: 0 auto 20px auto;
+	padding: 10px;
+	background-color: darken($light-green, 10%);
+	@include pie-clearfix;
+}
 
+.btn-container {
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+nav {
+	padding: 10px;
+	background-color: $med-green;
+	border-bottom: 1px dashed $light-green;
+
+}
 /* ============================================= */
 /*	Page Sections					   		*/ 
 /* ============================================= */
@@ -87,6 +106,8 @@ header {
 	border-bottom: 20px;
 	@include pie-clearfix;
 }
+
+// styling for code window
 
 .ex-code-mod {
 	width: 35%;
@@ -97,7 +118,22 @@ header {
 	float: right;
 	@include border-radius(8px);
 	@include box-shadow(rgba(0,0,0,.75) 5px 5px 5px);
+	@include trans;
+
+	&:hover {
+		background-color: rgba(0,0,0,1);
+	}
 }
+
+code {
+	color: #5cbb4d;
+}
+
+.code-white {
+	color: #FFF;
+}
+
+//styling for "blog post" window
 
 .ex-code-out {
 	width: 70%;
@@ -107,14 +143,6 @@ header {
 	padding: 60px;
 	float: right;
 	@include border-radius(8px);
-}
-
-.ex-code-arrow {
-	width: 240px;
-	height: 150px;
-	margin: 20px;
-	float: left;
-	background-color: #CCC;
 }
 
 .ex-h1 {
@@ -150,20 +178,25 @@ header {
 	@extend .open-reg;
 }
 
-code {
-	color: #5cbb4d;
+//the little arrow thing under the code
+.ex-code-arrow {
+	width: 240px;
+	height: 180px;
+	margin: 20px;
+	float: left;
+
+	background-image: url(/_img/ex-arrow.png);
 }
-.code-white {
-	color: #FFF;
-}
+
 
 .intro-mod {
 	@extend .mod;
+	margin-bottom: 60px;
 }
 
 .faq-mod {
 	@extend .mod;
-	@include media-grid(3, 20px);
+	@include media-grid(3, 40px);
 }
 
 .code-mod {
@@ -171,6 +204,8 @@ code {
 	@include ui-grid-2(50%,50%,10%);
 	.ui-block {
 		background-color: $black-90;
+		@include box-shadow(#000 5px 5px 5px inset);
+		@include border-radius(8px);
 		color: $black-10;
 		font-size: 15px;
 		min-height: 400px;
@@ -200,6 +235,7 @@ footer {
 
 .footer-container {
 	margin: 0 auto;
+	padding-top: 30px;
 	min-width: 768px;
 	max-width: 960px;
 	@include ui-grid-3;
@@ -212,7 +248,7 @@ footer {
 	a {
 		color: $dark-green;
 		&:hover { 
-			color: $med-green;
+			color: #FFF;
 		}
 	}
 }
