@@ -90,7 +90,10 @@ header {
 	max-width: 960px;
 	margin: 0 auto 20px auto;
 	padding: 10px;
-	background-color: darken($light-green, 10%);
+	background-color: darken($light-green, 5%);
+	@include border-radius(8px);
+
+	// @include background-image(linear-gradient($light-green, darken($light-green, 8%)));
 	border-right: 1px dashed $light-green;
 	border-left: 1px dashed $light-green;
 	@include pie-clearfix;
@@ -195,7 +198,7 @@ code {
 	margin: 20px;
 	float: left;
 
-	background-image: url(/_img/ex-arrow.png);
+	background-image: url(/_img/ex-arrow-two.png);
 }
 
 
@@ -211,7 +214,7 @@ code {
 	padding: 10px 12% 10px 12%;
 
 	.media-block {
-		margin: 0 0 25px 0;
+		margin: 0 0 40px 0;
 	}
 	// @include media-grid(3, 40px);
 }
