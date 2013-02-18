@@ -59,7 +59,14 @@
 .block-h {
 	color: $dark-green;
 	font-size: 18px;
+	margin-bottom: 10px;
 	@extend .adelle-bold;
+}
+
+.sm-label {
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
 }
 
 .label {
@@ -68,7 +75,6 @@
 	color: darken($dark-green, 10%);
 	// text-transform: uppercase;
 	@extend .open-reg;
-
 	a {
 		color: $light-green;
 		&:hover {

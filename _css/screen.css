@@ -398,6 +398,13 @@ button {
 .block-h {
   color: #3e9135;
   font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sm-label {
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
 }
 
 .label {
@@ -465,7 +472,24 @@ button {
   border: 1px solid #3e9135;
 }
 button:hover {
-  background-color: #3e9135;
+  color: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6ab25e), color-stop(100%, #5cbb4d));
+  background-image: -webkit-linear-gradient(#6ab25e, #5cbb4d);
+  background-image: -moz-linear-gradient(#6ab25e, #5cbb4d);
+  background-image: -o-linear-gradient(#6ab25e, #5cbb4d);
+  background-image: -ms-linear-gradient(#6ab25e, #5cbb4d);
+  background-image: linear-gradient(#6ab25e, #5cbb4d);
+}
+button:active {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3e9135), color-stop(100%, #3e9135));
+  background-image: -webkit-linear-gradient(#3e9135, #3e9135);
+  background-image: -moz-linear-gradient(#3e9135, #3e9135);
+  background-image: -o-linear-gradient(#3e9135, #3e9135);
+  background-image: -ms-linear-gradient(#3e9135, #3e9135);
+  background-image: linear-gradient(#3e9135, #3e9135);
+  -webkit-box-shadow: inset 0px 1px 5px 0px #3e9135;
+  -moz-box-shadow: inset 0px 1px 5px 0px #3e9135;
+  box-shadow: inset 0px 1px 5px 0px #3e9135;
 }
 button.big-btn {
   padding: 15px 30px;
@@ -504,7 +528,7 @@ header .logo {
 }
 
 .buttons {
-  max-width: 960px;
+  max-width: 420px;
   margin: 0 auto 20px auto;
   padding: 10px;
   background-color: #bedfaf;
@@ -695,7 +719,7 @@ code {
 /* ============================================= */
 footer {
   background-color: #6ab25e;
-  min-height: 200px;
+  min-height: 150px;
   border-top: 1px dashed #cde6c1;
   -webkit-box-shadow: #3e9135 0px 5px 10px inset;
   -moz-box-shadow: #3e9135 0px 5px 10px inset;
@@ -737,8 +761,9 @@ footer {
 }
 
 .ups-logo {
+  background-color: #000000;
   width: 100%;
-  margin: 60px 0 0 0;
+  margin: 30px 0 0 0;
   text-align: center;
 }
 
