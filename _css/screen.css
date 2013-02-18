@@ -493,7 +493,7 @@ button.big-btn {
 }
 
 .buttons {
-  max-width: 960px;
+  max-width: 420px;
   margin: 0 auto 20px auto;
   padding: 10px;
   background-color: #bedfaf;
@@ -767,7 +767,7 @@ code {
 /* ============================================= */
 footer {
   background-color: #6ab25e;
-  min-height: 200px;
+  min-height: 150px;
   border-top: 1px dashed #cde6c1;
   -webkit-box-shadow: #3e9135 0px 5px 10px inset;
   -moz-box-shadow: #3e9135 0px 5px 10px inset;
@@ -811,8 +811,9 @@ footer .container {
 }
 
 .ups-logo {
+  background-color: #000000;
   width: 100%;
-  margin: 60px 0 0 0;
+  margin: 30px 0 0 0;
   text-align: center;
 }
 

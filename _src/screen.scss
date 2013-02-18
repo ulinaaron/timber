@@ -116,7 +116,7 @@ button {
 }
 
 .buttons {
-	max-width: 960px;
+	max-width: 420px;
 	margin: 0 auto 20px auto;
 	padding: 10px;
 	background-color: darken($light-green, 5%);
@@ -348,7 +348,7 @@ code {
 
 footer {
 	background-color: $med-green;
-	min-height: 200px;
+	min-height: 150px;
 	border-top: 1px dashed $light-green;
 	@include box-shadow($dark-green 0px 5px 10px inset);
 
@@ -364,8 +364,9 @@ footer {
 }
 
 .ups-logo {
+	background-color: #000000;
 	width: 100%;
-	margin: 60px 0 0 0;
+	margin: 30px 0 0 0;
 	text-align: center;
 }
 
