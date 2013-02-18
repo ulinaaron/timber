@@ -230,7 +230,7 @@ nav {
 		background-color: #222;
 
 		@media (min-width: 600px){
-			width: 30%;
+			width: 25%;
 			float: left;
 			margin: 0;
 		}
@@ -244,10 +244,12 @@ nav {
 		@media (min-width: 600px){
 			.ui-block-1 {
 				float: left;
+				width: 40%;
 			}
 
 			.ui-block-2 {
 				float: right;
+				width: 40%;
 			}
 		}
 	}
