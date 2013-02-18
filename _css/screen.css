@@ -350,7 +350,7 @@ button {
 /*	Typography						 			  */
 /* ---------------------------------------------- */
 /* !-- Typefaces ------------------------------------ */
-.adelle-bold, .section-h, .block-h, button.big-btn, .ex-small {
+.adelle-bold, .section-h, .block-h, .label-h, button.big-btn, .ex-small {
   font-family: "adelle", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -436,6 +436,11 @@ body {
 .block-h {
   color: #3e9135;
   font-size: 18px;
+}
+
+.label-h {
+  font-size: 14px;
+  color: #3e9135;
 }
 
 .label {
@@ -811,7 +816,6 @@ footer .container {
 }
 
 .ups-logo {
-  background-color: #000000;
   width: 100%;
   margin: 30px 0 0 0;
   text-align: center;

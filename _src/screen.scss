@@ -63,6 +63,11 @@ body { background-color: $light-green; }
 	@extend .adelle-bold;
 }
 
+.label-h {
+	font-size: 14px;
+	@extend .adelle-bold;
+	color: $dark-green;
+}
 .label {
 	font-size: 14px;
 	line-height: 18px;
@@ -364,7 +369,6 @@ footer {
 }
 
 .ups-logo {
-	background-color: #000000;
 	width: 100%;
 	margin: 30px 0 0 0;
 	text-align: center;
