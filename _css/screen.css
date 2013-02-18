@@ -635,6 +635,14 @@ nav {
 .ie7 .ex-code-mod:hover {
   background-color: #000;
 }
+@media (min-width: 600px) {
+  .ie7 .code-mod .ui-block-1 {
+    float: left;
+  }
+  .ie7 .code-mod .ui-block-2 {
+    float: right;
+  }
+}
 
 code {
   color: #5cbb4d;

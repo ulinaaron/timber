@@ -239,6 +239,18 @@ nav {
 			background-color: #000;
 		}
 	}
+
+	.code-mod {
+		@media (min-width: 600px){
+			.ui-block-1 {
+				float: left;
+			}
+
+			.ui-block-2 {
+				float: right;
+			}
+		}
+	}
 }
 
 //inline styles for the code window
