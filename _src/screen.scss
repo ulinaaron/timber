@@ -220,6 +220,12 @@ nav {
 }
 
 .ie7 {
+
+	.ex-code-out {
+		@media (min-width: 600px){
+			width: 60%;
+		}
+	}
 	.ex-code-mod {
 		background-color: #222;
 

@@ -617,6 +617,11 @@ nav {
   }
 }
 
+@media (min-width: 600px) {
+  .ie7 .ex-code-out {
+    width: 60%;
+  }
+}
 .ie7 .ex-code-mod {
   background-color: #222;
 }
