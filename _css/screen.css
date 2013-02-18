@@ -627,8 +627,9 @@ nav {
 }
 @media (min-width: 600px) {
   .ie7 .ex-code-mod {
-    width: 25%;
+    width: 30%;
     float: left;
+    margin: 0;
   }
 }
 .ie7 .ex-code-mod:hover {
