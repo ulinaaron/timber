@@ -229,6 +229,9 @@ nav {
 	.ex-code-mod {
 		background-color: #222;
 
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		
 		@media (min-width: 600px){
 			width: 25%;
 			float: left;

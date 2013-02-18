@@ -624,6 +624,8 @@ nav {
 }
 .ie7 .ex-code-mod {
   background-color: #222;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 @media (min-width: 600px) {
   .ie7 .ex-code-mod {
