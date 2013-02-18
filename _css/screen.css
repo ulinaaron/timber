@@ -611,9 +611,6 @@ nav {
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
-  .ex-code-mod:hover {
-    background-color: black;
-  }
 }
 
 @media (min-width: 600px) {

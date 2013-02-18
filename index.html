@@ -64,8 +64,8 @@
 	<div class="container">
 		<div id="main" role="main">
 			<section class="section-mod">
-				<h2 class="section-h inline">Because Wordpress is awesome, but the _loop isn't.</h2>
-				<h3 class="section-txt">Timber is a Wordpress theme that uses the <a href="#">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the Wordpress model, while a single.html file can focus 100% on the HTML view.</h3>
+				<h2 class="section-h inline">Because WordPress is awesome, but the_loop isn't.</h2>
+				<h3 class="section-txt">Timber is a Wordpress theme that uses the <a href="http://twig.sensiolabs.org/">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the WordPress logic, while a single.html file can focus 100% on the HTML display.</h3>
 			</section>
 
 			<section class="explainer-mod">
@@ -73,8 +73,7 @@
 					<div class="ex-h1">Write better templates</div>
 					<div class="ex-small">By Jared Novack</div>
 					<div class="ex-img"><img src="_img/jared-photo.png"/></div>
-					<div class="ex-p"><p>Timber is a Wordpress theme that uses the <a href="#">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the Wordpress model, while a single.html file can focus 100% on the HTML view.</p>
-					<p>Timber is a Wordpress theme that uses the <a href="#">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the Wordpress model, while a single.html file can focus 100% on the HTML view.</p></div>
+					<div class="ex-p"><p>Timber helps Upstatement write some very complicated WordPress sites very simply. </p></div>
 				</div>
 
 				<div class="ex-code-mod">
@@ -120,7 +119,7 @@
 				<pre class="ui-block ui-block-2"><code class="twig">
 					{# single.html #}
 					{% extends "base.html" %}
-					&lt;h1&gt;{{title}}&lt;/h1&gt;<br/>&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.thumb_src}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						    {{post.post_content}}<br/>					&lt;/div&gt;
+					&lt;h1&gt;{{title}}&lt;/h1&gt;<br/>&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.thumb_src}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.post_content}}<br/>					&lt;/div&gt;
 				</code>
 				</pre>
 			</section>
