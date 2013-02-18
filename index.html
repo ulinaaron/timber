@@ -43,30 +43,28 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <body>
-		<nav>
-		<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because Wordpress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
-		</nav>
+	<nav>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because Wordpress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
+	</nav>
 
 
-		<header>
-			<div class="header-container">
-				<img class="logo" src="_img/timber-logo.png" />
-<!-- 				<div class="descrip">A better templating system for Wordpress</div>
- -->				<a href="http://www.github.com/jarednova/timber/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
-			</div>
-		</header>
-
-		<div class="buttons">
-			<div class="btn-container">
-				<button class="big-btn"><a href="#">Download Source</a></button>
-				<button class="big-btn"><a href="#" >View on GitHub</a></button>
-			</div>
+	<header>
+		<div class="container">
+			<img class="logo" src="_img/timber-logo.png" />
+			<a href="http://www.github.com/jarednova/timber/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 		</div>
+	</header>
 
-	<div id="container">
+	<div class="buttons">
+		<div class="btn-container">
+			<button class="big-btn"><a href="#">Download Source</a></button>
+			<button class="big-btn"><a href="#" >View on GitHub</a></button>
+		</div>
+	</div>
+
+	<div class="container">
 		<div id="main" role="main">
-
-			<section class="intro-mod">
+			<section class="section-mod">
 				<h2 class="section-h inline">Because Wordpress is awesome, but the _loop isn't.</h2>
 				<h3 class="section-txt">Timber is a Wordpress theme that uses the <a href="#">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the Wordpress model, while a single.html file can focus 100% on the HTML view.</h3>
 			</section><!--explainer-mod-->
@@ -81,6 +79,7 @@
 				</div>
 
 				<div class="ex-code-mod">
+					<div class="code-header">Less is more!</div>
 					<pre><code>
 						&lt;article&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.title }}</span>&lt;/h1&gt;
@@ -92,28 +91,28 @@
 				</div>
 
 				<div class="ex-code-arrow"></div>
-
 			</section><!--explainer-mod-->
 
 
 
-			<section class="faq-mod">
-				<div class="media-block">
+			<section class="section-mod">
+				<article>
 					<h4 class="section-h">Good for template designers</h4>
 					<p class="section-txt">Timber is great for teams of designers and developers. Not everyone knows the ins and outs of the _loop(), Wordpress, and PHP. With Timber, your best Wordpress dev can focus on the PHP, and your designers can work in much cleaner HTML markup.</p>
-				</div>
-				<div class="media-block">
+				</article>
+				<article>
 					<h4 class="section-h">Good for teams</h4>
 					<p class="section-txt">Timber is great for teams of designers and developers. Not everyone knows the ins and outs of the _loop(), Wordpress, and PHP. With Timber, your best Wordpress dev can focus on the PHP, and your designers can work in much cleaner HTML markup.</p>
-				</div>
-				<div class="media-block">
+				</article>
+				<article>
 					<h4 class="section-h">Good for everybody!</h4>
 					<p class="section-txt">Timber is great for teams of designers and developers. Not everyone knows the ins and outs of the _loop(), Wordpress, and PHP. With Timber, your best Wordpress dev can focus on the PHP, and your designers can work in much cleaner HTML markup.</p>
-				</div>
+				</article>
 			</section><!--explainer-mod-->
 
+
 			<section class="code-mod">
-				<h4 class="block-h">Code Examples</h4>
+				<h4 class="section-h">Code Examples</h4>
 				<div class="ui-block ui-block-1">
 					//This is an example of a php model
 				</div>
@@ -122,18 +121,17 @@
 				</div>
 			</section>
 
-		<div class="buttons">
-			<div class="btn-container">
-				<button class="big-btn"><a href="#">Download Source</a></button>
-				<button class="big-btn"><a href="#" >View on GitHub</a></button>
+			<div class="buttons">
+				<div class="btn-container">
+					<button class="big-btn"><a href="#">Download Source</a></button>
+					<button class="big-btn"><a href="#" >View on GitHub</a></button>
+				</div>
 			</div>
-		</div>
-
 		</div><!--eo main-->
-	</div> <!-- eo #container -->
+	</div> <!-- eo .container -->
 
 	<footer>
-		<div class="footer-container">
+		<div class="container">
 			<div class="ui-block-1">
 				<h5 class="label">Developed by <a href="http://www.twitter.com/jarednova">Jared Novack</a> and your friends at <a href="http://www.upstatement.com">Upstatement.</a></h5>
 			</div>
@@ -166,10 +164,7 @@
 	<!--<script type="text/javascript" src="_js/up-base.js"></script>-->
 	<script type="text/javascript" src="_js/script.js"></script>
 
-
 	<!-- end scripts-->
-
-
 
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->

@@ -26,9 +26,72 @@ body { background-color: $light-green; }
 
 .inline { display: inline; }
 
+/* ============================================= */
+/*	 Layout					   		*/ 
+/* ============================================= */ 
+
+.container {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
 
 /* ============================================= */
-/*	Universal Elements					   			 */ 
+/*	Typography		                             */
+/*	Variables defined in project/_type.scss		 */ 
+/* ============================================= */
+
+.default-link {
+	@include default-link;
+}
+
+.section-h {
+	color: $dark-green;
+	font-size: 26px;
+	@extend .adelle-bold;
+}
+
+.section-txt {
+	font-size: 18px;
+	line-height: 150%;
+	@extend .open-light;
+}
+
+.block-h {
+	color: $dark-green;
+	font-size: 18px;
+	@extend .adelle-bold;
+}
+
+.label {
+	font-size: 14px;
+	line-height: 18px;
+	color: darken($dark-green, 10%);
+	// text-transform: uppercase;
+	@extend .open-reg;
+
+	a {
+		color: $light-green;
+		&:hover {
+			color: $dark-green;
+		}
+	}
+
+	&.ss {
+		padding-left: 10px;
+	}
+}
+
+p {
+	font-size: 16px;
+	line-height: 150%;
+	margin-bottom: 20px;
+	@extend .open-light;
+}
+
+
+/* ============================================= */
+/*	Buttons					   			 */ 
 /* ============================================= */
 
 button {
@@ -52,23 +115,21 @@ button {
 	}
 }
 
-
-
-/* ============================================= */
-/*	Big Picture Layout					   		*/ 
-/* ============================================= */ 
-
-#container {
-	width: 100%;
+.buttons {
 	max-width: 960px;
-	margin: 0 auto;
+	margin: 0 auto 20px auto;
+	padding: 10px;
+	background-color: darken($light-green, 5%);
+	@include border-radius(8px);
+
+	border-right: 1px dashed $light-green;
+	border-left: 1px dashed $light-green;
+	@include pie-clearfix;
 }
 
-
-//@extend element
-.mod {
-	margin: 30px 0px;
-	padding: 0 15px;
+.btn-container {
+	text-align: center;
+	margin: 0 auto;
 }
 
 
@@ -91,30 +152,6 @@ header {
 	}
 }
 
-.descrip {
-	@extend .open-reg;
-	font-size: 16px;
-	text-align: center;
-}
-
-.buttons {
-	max-width: 960px;
-	margin: 0 auto 20px auto;
-	padding: 10px;
-	background-color: darken($light-green, 5%);
-	@include border-radius(8px);
-
-	border-right: 1px dashed $light-green;
-	border-left: 1px dashed $light-green;
-	@include pie-clearfix;
-}
-
-.btn-container {
-	text-align: center;
-	margin: 0 auto;
-}
-
-
 nav {
 	padding: 10px;
 	background-color: $med-green;
@@ -133,6 +170,24 @@ nav {
 		width: 100%;
 	}
 }
+
+.section-mod {
+	margin: 40px 0 40px 0;
+	padding: 20px;
+
+	article {
+		margin: 0 0 40px 0;
+	}
+
+	@media (min-width: 600px){
+		width: 100%;
+		padding: 10px 12% 10px 12%;
+	}
+}
+
+/* ============================================= */
+/*	Top section					   		*/ 
+/* ============================================= */
 
 // styling for code window
 .ex-code-mod {
@@ -166,6 +221,19 @@ code {
 	color: #FFF;
 }
 
+.code-header {
+	margin: 0 auto;
+	padding: 10px;
+	background-color: $med-green;
+	text-align: center;
+	color: #FFF;
+	@extend .open-reg;
+
+	@media (min-width: 600px){
+		display: none;
+	}
+}
+
 //styling for "blog post" window
 .ex-code-out {
 	width: 100%;
@@ -195,6 +263,11 @@ code {
 		background-position: center center;
 	}
 }
+
+
+/* ============================================= */
+/*	Typography for fake blog post				*/ 
+/* ============================================= */
 
 .ex-h1 {
 	font-size: 38px;
@@ -239,26 +312,13 @@ code {
 	}
 }
 
-
-.intro-mod {
-	@extend .mod;
-	margin-bottom: 60px;
-	padding: 10px 12% 10px 12%;
-}
-
-.faq-mod {
-	@extend .mod;
-	margin: 40px 0 40px 0;
-	padding: 10px 12% 10px 12%;
-
-	.media-block {
-		margin: 0 0 40px 0;
-	}
-	// @include media-grid(3, 40px);
-}
+/* ============================================= */
+/*	Code examples in bottom					   		*/ 
+/* ============================================= */
 
 .code-mod {
-	@extend .mod;
+	margin: 20px;
+
 	.ui-block {
 		background-color: $black-90;
 		@include box-shadow(#000 5px 5px 5px inset);
@@ -267,21 +327,18 @@ code {
 		font-size: 15px;
 		min-height: 400px;
 		padding: 10px;
+		margin-bottom: 20px;
 		@extend .inconsolata;
 	}
 
-	background-image: url(../_img/code-arrow.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-
 	@media(min-width: 600px){
 		@include ui-grid-2(50%,50%,10%);
+
+		background-image: url(../_img/code-arrow.png);
+		background-repeat: no-repeat;
+		background-position: center center;
 	}
 
-}
-
-.download-mod {
-	@extend .mod;
 }
 
 
@@ -294,16 +351,15 @@ footer {
 	min-height: 200px;
 	border-top: 1px dashed $light-green;
 	@include box-shadow($dark-green 0px 5px 10px inset);
-}
 
-.footer-container {
-	margin: 0 auto;
-	padding-top: 30px;
-	@extend .mod;
+	.container {
+		margin: 0 auto;
+		padding-top: 30px;
 
-	@media (min-width: 600px){
-		max-width: 960px;
-		@include ui-grid-3(40%, 40%, 20%, 5%);
+		@media (min-width: 600px){
+			max-width: 960px;
+			@include ui-grid-3(40%, 40%, 20%, 5%);
+		}
 	}
 }
 
@@ -324,16 +380,6 @@ footer {
 	}
 }
 
-
-/* ============================================= */
-/*	Other Elements				   		*/ 
-/* ============================================= */ 
-
-.twitter-share-button {
-	margin-left: 5px;
-}
-
-
 /* ============================================= */
 /*	Print Styles							     
 	Inline to avoid required HTTP connection     */
@@ -341,6 +387,3 @@ footer {
 
 // Import Print Styles
 @import "project/print";
-
-
-
