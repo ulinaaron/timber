@@ -617,6 +617,18 @@ nav {
   }
 }
 
+.ie7 .ex-code-mod {
+  background-color: #222;
+}
+@media (min-width: 600px) {
+  .ie7 .ex-code-mod {
+    width: 25%;
+  }
+}
+.ie7 .ex-code-mod:hover {
+  background-color: #000;
+}
+
 code {
   color: #5cbb4d;
 }
