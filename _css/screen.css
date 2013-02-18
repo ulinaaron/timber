@@ -468,6 +468,7 @@ p {
 /*	Buttons					   			 */
 /* ============================================= */
 button {
+  background-color: #5cbb4d;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5cbb4d), color-stop(100%, #3e9135));
   background-image: -webkit-linear-gradient(#5cbb4d, #3e9135);
   background-image: -moz-linear-gradient(#5cbb4d, #3e9135);
@@ -543,7 +544,7 @@ header .logo {
 
 nav {
   padding: 10px;
-  background-color: #6ab25e;
+  background-color: #71a768;
   border-bottom: 1px dashed #cde6c1;
 }
 
@@ -584,6 +585,7 @@ nav {
 /* ============================================= */
 .ex-code-mod {
   width: 100%;
+  background-color: #222;
   background-color: rgba(0, 0, 0, 0.85);
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 5px 0px 5px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 5px 0px 5px inset;
@@ -626,7 +628,7 @@ code {
 .code-header {
   margin: 0 auto;
   padding: 10px;
-  background-color: #6ab25e;
+  background-color: #71a768;
   text-align: center;
   color: #FFF;
 }
@@ -771,7 +773,7 @@ code {
 /*	Footer			   		*/
 /* ============================================= */
 footer {
-  background-color: #6ab25e;
+  background-color: #71a768;
   min-height: 150px;
   border-top: 1px dashed #cde6c1;
   -webkit-box-shadow: #3e9135 0px 5px 10px inset;
