@@ -219,8 +219,8 @@ nav {
 	}
 }
 
+//IE7 fixes
 .ie7 {
-
 	.ex-code-out {
 		@media (min-width: 600px){
 			width: 60%;
@@ -231,7 +231,7 @@ nav {
 
 		white-space: pre-wrap;
 		word-wrap: break-word;
-		
+
 		@media (min-width: 600px){
 			width: 25%;
 			float: left;
