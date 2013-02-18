@@ -585,8 +585,7 @@ nav {
 /* ============================================= */
 .ex-code-mod {
   width: 100%;
-  background-color: #222;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: #2d2d2d;
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 5px 0px 5px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 5px 0px 5px inset;
   box-shadow: rgba(0, 0, 0, 0.4) 5px 0px 5px inset;
@@ -757,7 +756,7 @@ code {
   margin: 20px;
 }
 .code-mod .ui-block {
-  background-color: #222222;
+  background-color: #2d2d2d;
   -webkit-box-shadow: black 5px 5px 5px inset;
   -moz-box-shadow: black 5px 5px 5px inset;
   box-shadow: black 5px 5px 5px inset;

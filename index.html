@@ -16,6 +16,10 @@
 	<!-- Icons -->
 	<link rel="shortcut icon" href="favicon.ico">
 
+	<link rel="stylesheet" href="/_css/highlight-styles/tomorrow-night-eighties.css">
+	<script src="/_js/libs/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="_css/ss-social.css">
 	<link rel="stylesheet" href="_css/screen.css">
@@ -75,7 +79,7 @@
 
 				<div class="ex-code-mod">
 					<div class="code-header">Less is more!</div>
-					<pre><code>
+					<pre><code class="handlebars">
 						&lt;article&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.title }}</span>&lt;/h1&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author }}</span>&lt;/small&gt;
@@ -106,21 +110,19 @@
 
 			<section class="code-mod">
 				<h4 class="section-h">Code Examples</h4>
-				<div class="ui-block ui-block-1">
+				<pre class="ui-block ui-block-1"><code class="php">
 					/* single.php */
 					$context = get_context();
 					$context['page_title'] = 'Any data I want to send';
 					$context['post'] = PostMaster::loop_to_post();
-					render_twig('single.html', $context);
-				</div>
-				<div class="ui-block ui-block-2">
-					<h1>{{title}}</h1>
-					<h2>{{post.post_title}}</h2>
-					<img src="{{post.thumb_src}}" />
-					<div class="body">
-						{{post.post_content}}
-					</div>
-				</div>
+					render_twig('single.html', $context);</code>
+				</pre>
+				<pre class="ui-block ui-block-2"><code class="twig">
+					{# single.html #}
+					{% extends "base.html" %}
+					&lt;h1&gt;{{title}}&lt;/h1&gt;<br/>&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.thumb_src}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						    {{post.post_content}}<br/>					&lt;/div&gt;
+				</code>
+				</pre>
 			</section>
 
 		<div class="buttons">

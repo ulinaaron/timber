@@ -198,8 +198,7 @@ nav {
 // styling for code window
 .ex-code-mod {
 	width: 100%;
-	background-color: #222;
-	background-color: rgba(0,0,0,.85);
+	background-color: #2d2d2d;
 	@include box-shadow(rgba(0,0,0,.4) 5px 0px 5px inset);
 
 	@media (min-width: 600px){
@@ -363,10 +362,10 @@ code {
 /* ============================================= */
 
 .code-mod {
-	margin: 20px;
+	margin: 20px; 
 
 	.ui-block {
-		background-color: $black-90;
+		background-color: #2d2d2d;
 		@include box-shadow(#000 5px 5px 5px inset);
 		@include border-radius(8px);
 		color: $black-10;
