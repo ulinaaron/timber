@@ -40,9 +40,15 @@ button {
 	&:hover { background-color: $dark-green; }
 	
 	&.big-btn {
-		padding: 15px 30px;
 		@extend .adelle-bold;
-		font-size: 16px;
+		font-size: 12px;
+		padding: 10px;
+		margin: 0 5px 0 0;
+
+		@media(min-width: 600px){
+			font-size: 16px;
+			padding: 15px 30px;
+		}
 	}
 }
 
@@ -54,10 +60,8 @@ button {
 
 #container {
 	width: 100%;
-	min-width: 768px;
 	max-width: 960px;
 	margin: 0 auto;
-	//background-color: white;
 }
 
 
@@ -77,6 +81,13 @@ header {
 	.logo {
 		display: block;
 		margin: 0 auto;
+
+		@media(max-width: 600px){
+			width: 60%;
+			img {
+				width: 100%;
+			}
+		}
 	}
 }
 
@@ -93,7 +104,6 @@ header {
 	background-color: darken($light-green, 5%);
 	@include border-radius(8px);
 
-	// @include background-image(linear-gradient($light-green, darken($light-green, 8%)));
 	border-right: 1px dashed $light-green;
 	border-left: 1px dashed $light-green;
 	@include pie-clearfix;
@@ -109,8 +119,8 @@ nav {
 	padding: 10px;
 	background-color: $med-green;
 	border-bottom: 1px dashed $light-green;
-
 }
+
 /* ============================================= */
 /*	Page Sections					   		*/ 
 /* ============================================= */
@@ -118,26 +128,36 @@ nav {
 .explainer-mod {
 	border-bottom: 20px;
 	@include pie-clearfix;
-}
 
-// styling for code window
-
-.ex-code-mod {
-	width: 35%;
-	height: 200px;
-	margin-top: -10px;
-	margin-right: -5%;
-	background-color: rgba(0,0,0,.85);
-	float: right;
-	@include border-radius(8px);
-	@include box-shadow(rgba(0,0,0,.4) 5px 5px 5px);
-	@include trans;
-
-	&:hover {
-		background-color: rgba(0,0,0,1);
+	@media (min-width: 600px){
+		width: 100%;
 	}
 }
 
+// styling for code window
+.ex-code-mod {
+	width: 100%;
+	background-color: rgba(0,0,0,.85);
+	@include box-shadow(rgba(0,0,0,.4) 5px 0px 5px inset);
+
+	@media (min-width: 600px){
+		width: 35%;
+		height: 200px;
+		margin-top: -10px;
+		margin-right: -5%;
+
+		float: right;
+		@include border-radius(8px);
+		@include box-shadow(rgba(0,0,0,.4) 5px 5px 5px);
+		@include trans;
+
+		&:hover {
+			background-color: rgba(0,0,0,1);
+		}
+	}
+}
+
+//inline styles for the code window
 code {
 	color: #5cbb4d;
 }
@@ -147,15 +167,33 @@ code {
 }
 
 //styling for "blog post" window
-
 .ex-code-out {
-	width: 70%;
-	height: 400px;
+	width: 100%;
 	background-color: #FFF;
 	border: 8px solid #EEE;
-	padding: 60px;
-	float: right;
-	@include border-radius(8px);
+	padding: 20px;
+
+	@media (min-width: 600px){
+		width: 70%;
+		padding: 60px;
+		float: right;
+		@include border-radius(8px);
+	}
+}
+
+//the little arrow thing under the code
+.ex-code-arrow {
+	display: none;
+	@media (min-width: 600px){
+		display: block;
+		width: 25%;
+		height: 180px;
+		float: left;
+
+		background-image: url(../_img/ex-arrow-two.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
 }
 
 .ex-h1 {
@@ -176,29 +214,29 @@ code {
 .ex-img {
 	float: left;
 	margin: 0 10px 10px 0;
+
 	img {
-		width: 80px;
-		height: 80px;
-		@include border-radius(100px);
-		border: 4px solid #EEE;
+		width: 40px;
+		height: 40px;
+	}
+	@media (min-width: 600px){
+		img {
+			width: 80px;
+			height: 80px;
+			@include border-radius(100px);
+			border: 4px solid #EEE;
+		}
 	}
 }
 
 .ex-p {
-	margin-left: 95px;
 	font-size: 14px;
 	line-height: 18px;
 	@extend .open-reg;
-}
 
-//the little arrow thing under the code
-.ex-code-arrow {
-	width: 240px;
-	height: 180px;
-	margin: 20px;
-	float: left;
-
-	background-image: url(../_img/ex-arrow-two.png);
+	@media (min-width: 600px){
+		margin-left: 95px;
+	}
 }
 
 
@@ -221,7 +259,6 @@ code {
 
 .code-mod {
 	@extend .mod;
-	@include ui-grid-2(50%,50%,10%);
 	.ui-block {
 		background-color: $black-90;
 		@include box-shadow(#000 5px 5px 5px inset);
@@ -236,6 +273,11 @@ code {
 	background-image: url(../_img/code-arrow.png);
 	background-repeat: no-repeat;
 	background-position: center center;
+
+	@media(min-width: 600px){
+		@include ui-grid-2(50%,50%,10%);
+	}
+
 }
 
 .download-mod {
@@ -257,10 +299,12 @@ footer {
 .footer-container {
 	margin: 0 auto;
 	padding-top: 30px;
-	min-width: 768px;
-	max-width: 960px;
-	@include ui-grid-3(40%, 40%, 20%, 5%);
 	@extend .mod;
+
+	@media (min-width: 600px){
+		max-width: 960px;
+		@include ui-grid-3(40%, 40%, 20%, 5%);
+	}
 }
 
 .ups-logo {
@@ -268,6 +312,7 @@ footer {
 	margin: 60px 0 0 0;
 	text-align: center;
 }
+
 .social-icons {
 	font-size: 25px;
 	text-align: right;
