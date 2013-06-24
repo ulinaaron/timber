@@ -505,7 +505,7 @@ button.big-btn {
 }
 
 .buttons {
-  max-width: 420px;
+  max-width: 620px;
   margin: 0 auto 20px auto;
   padding: 10px;
   background-color: #bedfaf;
@@ -532,9 +532,6 @@ button.big-btn {
 /* ============================================= */
 /*	Header					   		*/
 /* ============================================= */
-header {
-  margin: 20px 0;
-}
 header .logo {
   display: block;
   margin: 0 auto;
