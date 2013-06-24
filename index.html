@@ -50,7 +50,7 @@
 	<header class="header">
 		<div class="logo-container">
 			<img class="logo" src="_img/wood-banner.png" />
-			<a href="http://www.github.com/jarednova/timber/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+			<a href="http://www.github.com/jarednova/timber/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="_img/forkme.png" alt="Fork me on GitHub"></a>
 		</div>
 	</header>
 
@@ -79,7 +79,7 @@
 
 				<div class="ex-code-mod">
 					<div class="code-header">Less is more!</div>
-					<pre><code class="handlebars">
+					<pre><code class="twig">
 						&lt;article&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.title }}</span>&lt;/h1&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author }}</span>&lt;/small&gt;
@@ -112,15 +112,16 @@
 				<h4 class="section-h">Code Examples</h4>
 				<pre class="ui-block ui-block-1"><code class="php">
 					/* single.php */
-					$context = get_context();
-					$context['page_title'] = 'Any data I want to send';
+					$context = Timber::get_context();
+					$context['foo'] = 'Bar!';
 					$context['post'] = new TimberPost();
-					render_twig('single.twig', $context);</code>
+					Timber::render('single.twig', $context);</code>
 				</pre>
 				<pre class="ui-block ui-block-2"><code class="twig">
 					{# single.twig #}
 					{% extends "base.html" %}
-					&lt;h1&gt;{{title}}&lt;/h1&gt;<br/>&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.get_thumbnail.get_src|resize(300, 300)}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.get_content}}<br/>					&lt;/div&gt;
+					&lt;h1 class="big-title"&gt;{{foo}}&lt;/h1&gt;
+					&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.get_thumbnail.get_src|resize(300, 300)}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.get_content}}<br/>					&lt;/div&gt;
 				</code>
 				</pre>
 			</section>
