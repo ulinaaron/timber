@@ -44,7 +44,7 @@
 
 <body>
 	<nav>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because Wordpress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because WordPress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
 	</nav>
 
 	<header>
@@ -82,7 +82,7 @@
 						&lt;article&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.title }}</span>&lt;/h1&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author }}</span>&lt;/small&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="code-white">{{ post.img }}</span>" /&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="code-white">{{ post.get_thumbnail.get_src }}</span>" /&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<span class="code-white">{{ post.content }}</span>&lt;/p&gt;
 						&lt;/article&gt;
 					</code></pre>
@@ -113,13 +113,13 @@
 					/* single.php */
 					$context = get_context();
 					$context['page_title'] = 'Any data I want to send';
-					$context['post'] = PostMaster::loop_to_post();
-					render_twig('single.html', $context);</code>
+					$context['post'] = new TimberPost();
+					render_twig('single.twig', $context);</code>
 				</pre>
 				<pre class="ui-block ui-block-2"><code class="twig">
-					{# single.html #}
+					{# single.twig #}
 					{% extends "base.html" %}
-					&lt;h1&gt;{{title}}&lt;/h1&gt;<br/>&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.thumb_src}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.post_content}}<br/>					&lt;/div&gt;
+					&lt;h1&gt;{{title}}&lt;/h1&gt;<br/>&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.get_thumbnail.get_src|resize(300, 300)}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.get_content}}<br/>					&lt;/div&gt;
 				</code>
 				</pre>
 			</section>
