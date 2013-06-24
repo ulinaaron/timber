@@ -81,8 +81,8 @@
 					<div class="code-header">Less is more!</div>
 					<pre><code class="twig">
 						&lt;article&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.title }}</span>&lt;/h1&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author }}</span>&lt;/small&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.post_title }}</span>&lt;/h1&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author.name }}</span>&lt;/small&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="code-white">{{ post.get_thumbnail.get_src }}</span>" /&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<span class="code-white">{{ post.get_content }}</span>&lt;/p&gt;
 						&lt;/article&gt;
