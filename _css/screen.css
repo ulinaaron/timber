@@ -407,6 +407,14 @@ body {
   margin: 0 auto;
 }
 
+.logo-container .logo {
+  max-width: 100%;
+}
+
+.header {
+  margin-top: 0px;
+}
+
 /* ============================================= */
 /*	Typography		                             */
 /*	Variables defined in project/_type.scss		 */
@@ -414,7 +422,6 @@ body {
 .default-link {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   color: #1d78af;
@@ -473,7 +480,6 @@ button {
   background-image: -webkit-linear-gradient(#5cbb4d, #3e9135);
   background-image: -moz-linear-gradient(#5cbb4d, #3e9135);
   background-image: -o-linear-gradient(#5cbb4d, #3e9135);
-  background-image: -ms-linear-gradient(#5cbb4d, #3e9135);
   background-image: linear-gradient(#5cbb4d, #3e9135);
   color: #ededed;
   -webkit-border-radius: 5px 5px;
@@ -607,7 +613,6 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 5px;
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
-    -ms-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
@@ -823,21 +828,21 @@ footer .container {
   }
   footer .container > .ui-block-1,
   footer .container > .ui-block.first {
-    width: 38.333%;
+    width: 38.33333%;
     display: inline;
     float: left;
     margin-right: 2.5%;
   }
   footer .container > .ui-block-2,
   footer .container > .ui-block.second {
-    width: 38.333%;
+    width: 38.33333%;
     display: inline;
     float: left;
     margin-right: 2.5%;
   }
   footer .container > .ui-block-3,
   footer .container > .ui-block.last {
-    width: 18.333%;
+    width: 18.33333%;
     display: inline;
     float: left;
     margin-right: 0;

@@ -36,6 +36,17 @@ body { background-color: $light-green; }
 	margin: 0 auto;
 }
 
+.logo-container {
+	.logo {
+		max-width:100%;
+	}
+}
+
+.header {
+	margin-top:0px;
+}
+
+
 /* ============================================= */
 /*	Typography		                             */
 /*	Variables defined in project/_type.scss		 */ 

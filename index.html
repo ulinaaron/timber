@@ -47,9 +47,9 @@
 	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because WordPress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
 	</nav>
 
-	<header>
-		<div class="container">
-			<img class="logo" src="_img/timber-logo.png" />
+	<header class="header">
+		<div class="logo-container">
+			<img class="logo" src="_img/wood-banner.png" />
 			<a href="http://www.github.com/jarednova/timber/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 		</div>
 	</header>
@@ -58,6 +58,7 @@
 		<div class="btn-container">
 			<button class="big-btn"><a href="https://github.com/jarednova/timber/archive/master.zip">Download ZIP</a></button> 
 			<button class="big-btn"><a href="https://github.com/jarednova/timber">View on GitHub</a></button>
+			<button class="big-btn"><a href="https://github.com/jarednova/timber/wiki"> Documentation</a></button>
 		</div>
 	</div>
 
@@ -83,7 +84,7 @@
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.title }}</span>&lt;/h1&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author }}</span>&lt;/small&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="code-white">{{ post.get_thumbnail.get_src }}</span>" /&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<span class="code-white">{{ post.content }}</span>&lt;/p&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<span class="code-white">{{ post.get_content }}</span>&lt;/p&gt;
 						&lt;/article&gt;
 					</code></pre>
 				</div>
