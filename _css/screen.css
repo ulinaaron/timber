@@ -487,15 +487,20 @@ button {
   -ms-border-radius: 5px 5px;
   -o-border-radius: 5px 5px;
   border-radius: 5px 5px;
-  border: 1px solid #3e9135;
+  border: 1px solid #4eb643;
 }
 button:hover {
-  background-color: #3e9135;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #156f5f), color-stop(100%, #3e9135));
+  background-image: -webkit-linear-gradient(#156f5f, #3e9135);
+  background-image: -moz-linear-gradient(#156f5f, #3e9135);
+  background-image: -o-linear-gradient(#156f5f, #3e9135);
+  background-image: linear-gradient(#156f5f, #3e9135);
 }
 button.big-btn {
   font-size: 12px;
   padding: 10px;
   margin: 0 5px 0 0;
+  width: 30%;
 }
 @media (min-width: 600px) {
   button.big-btn {
@@ -505,10 +510,9 @@ button.big-btn {
 }
 
 .buttons {
-  max-width: 620px;
+  max-width: 720px;
   margin: 0 auto 20px auto;
   padding: 10px;
-  background-color: #bedfaf;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
