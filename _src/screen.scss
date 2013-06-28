@@ -182,13 +182,11 @@ header {
 	.logo {
 		display: block;
 		margin: 0 auto;
-
-		@media(max-width: 600px){
-			width: 60%;
-			img {
-				width: 100%;
-			}
+		width:100%;
+		img {
+			width:100%;
 		}
+		
 	}
 }
 
