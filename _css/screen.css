@@ -350,7 +350,7 @@ button {
 /*	Typography						 			  */
 /* ---------------------------------------------- */
 /* !-- Typefaces ------------------------------------ */
-.adelle-bold, .section-h, .block-h, .label-h, .big-btn, button.big-btn, .ex-small {
+.adelle-bold, .section-h1, .section-h, .block-h, .label-h, .big-btn, button.big-btn, .ex-small {
   font-family: "adelle", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -428,6 +428,14 @@ body {
 }
 .default-link:hover {
   color: #165a83;
+}
+
+.section-h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .section-h {
@@ -964,4 +972,8 @@ footer .container {
   h3 {
     page-break-after: avoid;
   }
+}
+html pre code {
+  padding: 1.5em;
+  padding-top: 0px;
 }

@@ -44,7 +44,7 @@
 
 <body>
 	<nav>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because WordPress is awesome, but the _loop isn't." data-via="upstatement">Tweet</a>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because WordPress is awesome, but the_loop isn't." data-via="upstatement">Tweet</a>
 	</nav>
 
 	<header class="header">
@@ -66,7 +66,7 @@
 		<div id="main" role="main">
 			<section class="section-mod">
 				<h2 class="section-h inline">Because WordPress is awesome, but the loop isn't.</h2>
-				<h3 class="section-txt">Timber is a WordPress plugin that uses the <a href="http://twig.sensiolabs.org/">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the WordPress logic, while a single.twig file can focus 100% on the HTML display.</h3>
+				<h3 class="section-txt">Timber is a WordPress plugin that uses the <a href="http://twig.sensiolabs.org/">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the WordPress logic, while a single.twig file can focus 100% on the HTML display. In your theme, it's a library not a framework. So use the parts that that you need when you need them.</h3>
 			</section>
 
 			<section class="explainer-mod">
@@ -125,6 +125,66 @@
 				</code>
 				</pre>
 			</section>
+
+			<section class="section-mod tech-features">
+				<h2 class="section-h1">Technical highlights</h2>
+				<article>
+					<h4 class="section-h">Object Oriented Posts, Terms, Users and More</h4>
+					<p class="section-txt">Speak to the common WordPress objects in a way that makes sense. Have you ever tried to get the thumbnail of a post? Don't lie to me, of course you have! It probably looked something like this:</p>
+					<pre><code class="php">
+						$thumb_id = get_post_thumbnail_id($post->ID);
+						$url = wp_get_attachment_url($thumb_id);
+						&lt;img src="&lt;?php echo $url; ?&gt;" alt="Thumbnail for &lt;?php echo $post->post_title; ?&gt;" /&gt;
+					</code></pre>
+					<p class="section-txt">
+						Yuk! Let's try it the Timber way...
+					</p>
+					<pre><code class="twig">
+						{# single.twig #}
+						&lt;img src="{{post.get_thumbnail.get_src}}" alt="Thumbnail for {{post.post_title}}" /&gt;
+					</code></pre>
+					<p class="section-txt">You can find the full <a href="https://github.com/jarednova/timber/wiki#object-documentation">object reference here</a>.</p>
+				</article>
+				<article>
+					<h4 class="section-h">Express/Node-style routing</h4>
+					<p class="section-txt">When I first used routes in Node.js I fell in love. But when I tried to do the same, WordPress broke my heart.</p>
+					<pre><code class="php">
+						add_rewrite_rule('jobs/page/([0-9]+)?$', 'index.php?pagename=jobs&paged=$matches[1]', 'top' ); 
+					</code></pre>
+					<p class="section-txt">There's got to be a better way!</p>
+					<pre><code class="php">
+						Timber::add_route('jobs/list', function($params){
+							$query = 'posts_per_page=5&post_type=jobs;
+							query_posts($query);
+							Timber::load_template('archive.php');
+						});
+
+						Timber::add_route('jobs/list/page/:pg', function($params){
+							$query = 'posts_per_page=5&post_type=jobs&paged='.$params['pg'];
+							query_posts($query);
+							Timber::load_template('archive.php');
+						});	
+					</code></pre>
+					<p class="section-txt">A few extra lines? Guilty! But clear as hell? You betcha.</p>
+
+				 
+				</article>
+				<article>
+					<h4 class="section-h">It's a library, not a Framework</h4>
+					<p class="section-txt">The tools I've come to rely on are the tools that evolve into your workflow. I didn't know I wanted to use jQuery or SASS until I started using them. Bit-by-bit they replaced the 'old' ways of doing things until I couldn't imagine life without them. Timber lets you start with just a bit. Say you want to just include an HTML snippet with a variable from your database:</p>
+					<pre><code class="php">
+						/* home.php */
+						$data['welcome_message'] = get_option('welcome_message');
+						Timber::render('welcome.twig', $data);
+					</pre></code>
+
+					<pre><code class="twig">
+						{# welcome.twig #}
+						&lt;p class="intro"&gt;{{welcome_message}}&lt;/p&gt;
+					</code></pre>
+					<p class="section-txt">Check out the <a href="https://github.com/jarednova/timber/wiki/Video-Tutorials">Screencasts</a> for a walk through of how to start integrating Timber, today!</p>
+				</article>
+			</section><!--explainer-mod-->
 
 		<div class="buttons">
 			<div class="btn-container">

@@ -56,6 +56,15 @@ body { background-color: $light-green; }
 	@include default-link;
 }
 
+.section-h1 {
+	font-size:26px;
+	@extend .adelle-bold;
+	margin-bottom:20px; 
+	text-align:center;
+	text-transform:uppercase;
+	color:rgba(black, .6);
+}
+
 .section-h {
 	color: $dark-green;
 	font-size: 26px;
@@ -464,3 +473,8 @@ footer {
 
 // Import Print Styles
 @import "project/print";
+
+html pre code {
+	padding:1.5em;
+	padding-top:0px;
+}
