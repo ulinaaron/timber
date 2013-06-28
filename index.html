@@ -154,7 +154,7 @@
 					<p class="section-txt">There's got to be a better way!</p>
 					<pre><code class="php">
 						Timber::add_route('jobs/list', function($params){
-							$query = 'posts_per_page=5&post_type=jobs;
+							$query = 'posts_per_page=5&post_type=jobs';
 							query_posts($query);
 							Timber::load_template('archive.php');
 						});
