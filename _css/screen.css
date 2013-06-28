@@ -350,7 +350,7 @@ button {
 /*	Typography						 			  */
 /* ---------------------------------------------- */
 /* !-- Typefaces ------------------------------------ */
-.adelle-bold, .section-h, .block-h, .label-h, button.big-btn, .ex-small {
+.adelle-bold, .section-h, .block-h, .label-h, .big-btn, button.big-btn, .ex-small {
   font-family: "adelle", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -474,6 +474,40 @@ p {
 /* ============================================= */
 /*	Buttons					   			 */
 /* ============================================= */
+.big-btn {
+  background-color: #5cbb4d;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5cbb4d), color-stop(100%, #3e9135));
+  background-image: -webkit-linear-gradient(#5cbb4d, #3e9135);
+  background-image: -moz-linear-gradient(#5cbb4d, #3e9135);
+  background-image: -o-linear-gradient(#5cbb4d, #3e9135);
+  background-image: linear-gradient(#5cbb4d, #3e9135);
+  color: #ededed;
+  -webkit-border-radius: 5px 5px;
+  -moz-border-radius: 5px 5px;
+  -ms-border-radius: 5px 5px;
+  -o-border-radius: 5px 5px;
+  border-radius: 5px 5px;
+  border: 1px solid #4eb643;
+  font-size: 12px;
+  padding: 10px;
+  margin: 0 5px 0 0;
+  width: 30%;
+  display: inline-block;
+}
+@media (min-width: 600px) {
+  .big-btn {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+}
+.big-btn:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #156f5f), color-stop(100%, #3e9135));
+  background-image: -webkit-linear-gradient(#156f5f, #3e9135);
+  background-image: -moz-linear-gradient(#156f5f, #3e9135);
+  background-image: -o-linear-gradient(#156f5f, #3e9135);
+  background-image: linear-gradient(#156f5f, #3e9135);
+}
+
 button {
   background-color: #5cbb4d;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5cbb4d), color-stop(100%, #3e9135));
