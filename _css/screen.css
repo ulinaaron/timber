@@ -349,7 +349,7 @@ button {
 /*	Typography						 			  */
 /* ---------------------------------------------- */
 /* !-- Typefaces ------------------------------------ */
-.adelle-bold, .section-h1, .section-h, .block-h, .label-h, .big-btn, button.big-btn, .ex-small {
+.adelle-bold, .section-h1, .section-h, .block-h, .label-h, button.big-btn, .ex-small {
   font-family: "adelle", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -482,24 +482,28 @@ p {
 /*	Buttons					   			 */
 /* ============================================= */
 .big-btn {
-  background-color: #5cbb4d;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5cbb4d), color-stop(100%, #3e9135));
-  background-image: -webkit-linear-gradient(#5cbb4d, #3e9135);
-  background-image: -moz-linear-gradient(#5cbb4d, #3e9135);
-  background-image: -o-linear-gradient(#5cbb4d, #3e9135);
-  background-image: linear-gradient(#5cbb4d, #3e9135);
-  color: #ededed;
+  background-color: #71a768;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8fba88), color-stop(100%, #598b51));
+  background-image: -webkit-linear-gradient(#8fba88, #598b51);
+  background-image: -moz-linear-gradient(#8fba88, #598b51);
+  background-image: -o-linear-gradient(#8fba88, #598b51);
+  background-image: linear-gradient(#8fba88, #598b51);
+  color: #cde6c1;
   -webkit-border-radius: 5px 5px;
   -moz-border-radius: 5px 5px;
   -ms-border-radius: 5px 5px;
   -o-border-radius: 5px 5px;
   border-radius: 5px 5px;
-  border: 1px solid #4eb643;
+  font-family: "Open Sans", Arial, Helvetica, Verdana, sans-serif;
   font-size: 12px;
   padding: 10px;
+  font-weight: bold;
   margin: 0 5px 0 0;
   width: 30%;
   display: inline-block;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 600px) {
   .big-btn {
@@ -508,11 +512,16 @@ p {
   }
 }
 .big-btn:hover {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #156f5f), color-stop(100%, #3e9135));
-  background-image: -webkit-linear-gradient(#156f5f, #3e9135);
-  background-image: -moz-linear-gradient(#156f5f, #3e9135);
-  background-image: -o-linear-gradient(#156f5f, #3e9135);
-  background-image: linear-gradient(#156f5f, #3e9135);
+  background-color: #0e554b;
+  color: #edf6e9;
+  -webkit-box-shadow: 0px 0px 2px rgba(14, 85, 75, 0.5);
+  -moz-box-shadow: 0px 0px 2px rgba(14, 85, 75, 0.5);
+  box-shadow: 0px 0px 2px rgba(14, 85, 75, 0.5);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #158172), color-stop(100%, #072924));
+  background-image: -webkit-linear-gradient(#158172, #072924);
+  background-image: -moz-linear-gradient(#158172, #072924);
+  background-image: -o-linear-gradient(#158172, #072924);
+  background-image: linear-gradient(#158172, #072924);
 }
 
 button {
@@ -1003,17 +1012,36 @@ pre {
 
 .nav-main-link, .main-nav-link {
   background-color: #0e554b;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #106257), color-stop(100%, #0e554b));
+  background-image: -webkit-linear-gradient(#106257, #0e554b);
+  background-image: -moz-linear-gradient(#106257, #0e554b);
+  background-image: -o-linear-gradient(#106257, #0e554b);
+  background-image: linear-gradient(#106257, #0e554b);
   display: block;
   text-align: center;
   height: 32px;
-  padding: 7px;
+  padding: 6px 7px;
   color: #71a768;
   font-family: "Open Sans", Arial, Helvetica, Verdana, sans-serif;
   font-weight: 700;
   font-size: 15px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 .nav-main-link:hover, .main-nav-link:hover {
   color: #cde6c1;
+  background-color: #158172;
+  background-color: #5cbb4d;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66bf58), color-stop(100%, #5cbb4d));
+  background-image: -webkit-linear-gradient(#66bf58, #5cbb4d);
+  background-image: -moz-linear-gradient(#66bf58, #5cbb4d);
+  background-image: -o-linear-gradient(#66bf58, #5cbb4d);
+  background-image: linear-gradient(#66bf58, #5cbb4d);
 }
 
 .tagline {

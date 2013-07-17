@@ -58,17 +58,25 @@
 }
 .nav-main-link, .main-nav-link {
 	background-color:$evergreen;
+	@include background-image(linear-gradient(lighten($evergreen, 3), darken($evergreen, 0)));
 	display:block;
 	text-align:center;
 	height:32px;
-	padding:7px;
+	padding:6px 7px;
 	color:$med-green;
 	font-family:$openSans;
 	font-weight:700;
 	font-size:15px;
+	border:1px solid;
+	border-color:rgba(black, .1) rgba(black, .1), rgba(black, .25);
+	@include border-radius(5px); 
 	&:hover {
 		color:$light-green;
+		background-color:lighten($evergreen, 10);
+		background-color:$bright-green; 
+		@include background-image(linear-gradient(lighten($bright-green, 3), darken($bright-green, 0)));
 	}
+
 }
 
 .tagline {

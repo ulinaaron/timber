@@ -121,23 +121,29 @@ p {
 /* ============================================= */
 
 .big-btn {
-	background-color: $bright-green;
-	@include background-image(linear-gradient($bright-green, $dark-green));
-	color: $black-10;
+	background-color: $med-green;
+	@include background-image(linear-gradient(lighten($med-green, 10), darken($med-green, 10)));
+	color: $light-green;
 	@include border-radius(5px 5px);
-	border: 1px solid lighten($dark-green, 10);
-	@extend .adelle-bold;
+	font-family:$openSans;
 	font-size: 12px;
 	padding: 10px;
+	font-weight:bold;
 	margin: 0 5px 0 0;
 	width:30%;
 	display:inline-block;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+	border:1px solid;
+	border-color:rgba(black, 0.1) rgba(black, 0.1) rgba(black, 0.25);
 	@media(min-width: 600px){
 		font-size: 16px;
 		padding: 15px 30px;
 	}
 	&:hover { 
-		@include background-image(linear-gradient(lighten($blue-green, 10), $dark-green));
+		background-color:$evergreen;
+		color:$whiteGreen;
+		@include box-shadow(0px 0px 2px rgba($evergreen, .5));
+		@include background-image(linear-gradient(lighten($evergreen, 10), darken($evergreen, 10)));
 	}
 	
 	
