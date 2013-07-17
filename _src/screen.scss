@@ -24,6 +24,8 @@ em   	{	font-style: italic;	}
 
 body { background-color: $light-green; }
 
+$codeBlack : rgb(72, 78, 88);
+
 .inline { display: inline; }
 
 /* ============================================= */
@@ -45,7 +47,6 @@ body { background-color: $light-green; }
 .header {
 	margin-top:0px;
 }
-
 
 /* ============================================= */
 /*	Typography		                             */
@@ -239,8 +240,8 @@ nav {
 // styling for code window
 .ex-code-mod {
 	width: 100%;
-	background-color: #2d2d2d;
-	@include box-shadow(rgba(0,0,0,.4) 5px 0px 5px inset);
+	background-color: $codeBlack;
+	@include box-shadow(rgba(0,0,0,.4) 0px 0px 8px);
 
 	@media (min-width: 600px){
 		width: 35%;
@@ -249,14 +250,19 @@ nav {
 		margin-right: -5%;
 
 		float: right;
-		@include border-radius(8px);
-		@include box-shadow(rgba(0,0,0,.4) 5px 5px 5px);
+		@include box-shadow(0px 0px 5px rgba(black, .4) );
 		@include trans;
 
 		&:hover {
 			
 		}
 	}
+}
+
+.code-mod {
+	background-color:$codeBlack;
+	@include box-shadow(rgba(0,0,0,.4) 0px 0px 8px);
+	margin-bottom:10px;
 }
 
 //IE7 fixes
@@ -283,7 +289,7 @@ nav {
 		}
 	}
 
-	.code-mod {
+	.code-examples {
 		@media (min-width: 600px){
 			.ui-block-1 {
 				float: left;
@@ -402,13 +408,12 @@ code {
 /*	Code examples in bottom					   		*/ 
 /* ============================================= */
 
-.code-mod {
+.code-sections, .code-examples {
 	margin: 20px; 
 
 	.ui-block {
-		background-color: #2d2d2d;
-		@include box-shadow(#000 5px 5px 5px inset);
-		@include border-radius(8px);
+		background-color: $codeBlack;
+		@include box-shadow(rgba(black, .5) 0px 0px 5px);
 		color: $black-10;
 		font-size: 15px;
 		min-height: 400px;
@@ -475,6 +480,9 @@ footer {
 @import "project/print";
 
 html pre code {
-	padding:1.5em;
+	padding-top:0px;
+}
+
+pre {
 	padding-top:0px;
 }

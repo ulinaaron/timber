@@ -35,7 +35,7 @@
 
 pre code {
   display: block;
-  background: #2d2d2d;
+  background: rgb(72, 78, 88);
   color: #cccccc;
   padding: 0.5em;
 }
