@@ -78,7 +78,7 @@ $width-1: 50% !default;
 $width-2: 50% !default; 
 $margin-r: 5% !default; 
 
-@mixin ui-grid-2($width-1,$width-2,$margin-r) {
+@mixin ui-grid-2($width-1:50%,$width-2:50%,$margin-r:5%) {
 	@include pie-clearfix;
 
 	> .ui-block-1,

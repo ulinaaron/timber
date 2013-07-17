@@ -31,6 +31,12 @@ $dark-green: #3e9135;
 $blue-green:#0d443a;
 $bright-green: #5cbb4d;
 
+$textGreen:rgb(59, 64, 59);
+$evergreen:rgb(14, 85, 75);
+$white-green:rgb(237, 246, 233);
+$whiteGreen:$white-green;
+$greenWhite:$white-green;
+
 $link: $blue;
 $link-hover: darken($link, 8%);
 $highlight: #ea4c88;  //Pink
@@ -38,3 +44,9 @@ $highlight: #ea4c88;  //Pink
 $sans:Arial,Helvetica,Verdana,sans-serif;
 $serif:Georgia,Times,Times New Roman,serif;
 $mono:"Courier New",Courier,mono;
+
+$coustard:'Coustard', $serif;
+$open-sans:'Open Sans', $sans;
+$custard:$coustard;
+$openSans:$open-sans;
+

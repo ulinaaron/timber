@@ -13,7 +13,6 @@
 	<link rel="apple-touch-icon" href="_img/apple-touch-icon.png"/>
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
 	
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Coustard:900' rel='stylesheet' type='text/css'>
 	<!-- Icons -->
 	<link rel="shortcut icon" href="favicon.ico">
 
@@ -44,162 +43,108 @@
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <body>
-	<nav class="nav-stripe">
-		<nav class="nav-social">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because WordPress is awesome, but the_loop isn't." data-via="upstatement">Tweet</a>
-			<iframe src="http://ghbtns.com/github-btn.html?user=jarednova&amp;repo=timber&amp;type=watch&amp;count=true"
+	<nav>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-text="Timber: because WordPress is awesome, but the_loop isn't." data-via="upstatement">Tweet</a>
+	<iframe src="http://ghbtns.com/github-btn.html?user=jarednova&amp;repo=timber&amp;type=watch&amp;count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-		</nav>
-
-		<nav class="nav-main">
-			<ul>
-				<li>
-					<a class="main-nav-link" href="http://wordpress.org/plugins/timber-library/">Download</a>
-				</li>
-				<li>
-					<a class="main-nav-link" href="https://github.com/jarednova/timber/wiki">Documentation</a>
-				</li>
-				<li>
-					<a class="main-nav-link" href="https://github.com/jarednova/timber/wiki/Video-Tutorials">Screencasts</a>
-				</li>
-			</ul>
-		</nav>
-
-		<nav class="nav-placeholder">
-
-		</nav>
 	</nav>
 
 	<header class="header">
 		<div class="logo-container">
-			<img class="logo mobile" src="_img/wood-banner-mobile.png" />
-			<img class="logo desktop" src="_img/wood-banner.png" />
+			<img class="logo" src="_img/wood-banner.png" />
 			<a href="http://github.com/jarednova/timber/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="_img/forkme.png" alt="Fork me on GitHub"></a>
 		</div>
-
-		<h2 class="tagline">
-			Make WordPress themes with beautiful, simple code
-		</h2>
 	</header>
 
-	<div class="promo-stripe">
-		<ul class="content-wrapper features">
-			<li class="feature">
-				<h3 class="headline-s">Less Mess</h3>
-				<p class="txt-s">
-					Use the <a href="">Twig Template Language</a> to seperate your HTML from PHP. This makes it easier to design with super-clean HTML-like syntax.
-				</p>
-				<div class="feature-icon-mod">
-					<img src="_img/_icons/saw.png" class="feature-icon-img" />
-				</div>
-			</li>
-			<li class="feature">
-				<h3 class="headline-s">Less Stress</h3>
-				<p class="txt-s">
-					Use the Twig Template Language to seperate your HTML from PHP. This makes it easier to design with super-clean HTML-like syntax.
-				</p>
-				<div class="feature-icon-mod">
-					<img src="_img/_icons/axe.png" class="feature-icon-img" />
-				</div>
-			</li>
-			<li class="feature">
-				<h3 class="headline-s">Build Bigger</h3>
-				<p class="txt-s">
-					Use the Twig Template Language to seperate your HTML from PHP. This makes it easier to design with super-clean HTML-like syntax.
-				</p>
-				<div class="feature-icon-mod">
-					<img src="_img/_icons/chainsaw.png" class="feature-icon-img" />
-				</div>
-			</li>
-		</ul>
+	<div class="buttons">
+		<div class="btn-container">
+			<a class="big-btn" href="http://wordpress.org/plugins/timber-library/">Download</a>
+			<a class="big-btn" href="https://github.com/jarednova/timber/wiki">Documentation</a>
+			<a class="big-btn" href="https://github.com/jarednova/timber/wiki/Video-Tutorials">Screencasts</a>
+		</div>
 	</div>
-
 
 	<div class="container">
 		<div id="main" role="main">
-
-		<h2 class="section-h1">
-			Because WordPress is awesome,<br>but the loop isn't.
-		</h2>
 			<section class="section-mod">
-				<h3 class="section-head">
-					What does it look like?
-				</h3>
-				<p class="txt">
-					With Timber you manage your theme in PHP and Twig (HTML) files. This seperates the logic (getting stuff from WordPress) from presentation (adding tags, classes, etc.) &mdash; just like Rails, Django, Node and other platforms.
-				</p>
-
-				<div class="code-examples code-side-by-side">
-					<div class="code-holder ui-block-1">
-						<pre>
-							<code class="php">
-							$context = Timber::get_context();
-							$context['foo'] = 'Bar!';
-							$context['post'] = new TimberPost();
-							Timber::render('single.twig', $context);
-							</code>
-						</pre>
-						<div class="code-tag bottom">
-							<span class="muted">single</span>.php
-						</div>
-					</div>
-					<div class="code-holder ui-block-2">
-						<pre>
-							<code class="twig">
-								{% extends "base.twig" %}
-								&lt;h1 class="big-title"&gt;{{foo}}&lt;/h1&gt;
-								&lt;h2&gt;{{post.title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.thumbnail.src}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.content}}<br/>					&lt;/div&gt;
-							</code>
-						</pre>
-						<div class="code-tag bottom">
-							<span class="muted">single</span>.twig
-						</div>
-					</div>
-				</div>
-			
-				<h3 class="section-head">
-					What does it look like? (Part 2)
-				</h3>
-				<p class="txt">
-					Timber doesn’t change the appearance of your theme. You control it by creating classes and assigning styles. It’s like buying a chainsaw — it doesn’t make your trees look different ‘till you start using it.
-				</p>
+				<h2 class="section-h inline">Because WordPress is awesome, but the loop isn't.</h2>
+				<h3 class="section-txt">Timber is a WordPress plugin that uses the <a href="http://twig.sensiolabs.org/">Twig Templating Engine</a>. This helps clean up your theme code so your single.php file can focus on the WordPress logic, while a single.twig file can focus 100% on the HTML display. In your theme, it's a library not a framework. So use the parts that that you need when you need them.</h3>
 			</section>
 
+			<section>
+				
+			</section>
+
+			<section class="explainer-mod">
+				<div class="ex-code-out">
+					<div class="ex-h1">Write better templates</div>
+					<div class="ex-small">By Jared Novack</div>
+					<div class="ex-img"><img src="_img/jared-photo.png"/></div>
+					<div class="ex-p">
+						<p>Timber helps Upstatement write some very complicated WordPress sites very simply. Start using it today to create better, more maintainable code that can be shared and updated.</p>
+						<iframe src="http://ghbtns.com/github-btn.html?user=jarednova&amp;repo=timber&amp;type=watch&amp;count=true&amp;size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+
+  <iframe src="http://ghbtns.com/github-btn.html?user=jarednova&amp;repo=timber&amp;type=fork&amp;count=true&amp;size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+					</div>
+				</div>
+
+				<div class="ex-code-mod">
+					<div class="code-header">Less is more!</div>
+					<pre><code class="twig">
+						&lt;article&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<span class="code-white">{{ post.post_title }}</span>&lt;/h1&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<span class="code-white">{{ post.author.name }}</span>&lt;/small&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="<span class="code-white">{{ post.get_thumbnail.get_src }}</span>" /&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;<span class="code-white">{{ post.get_content }}</span>&lt;/p&gt;
+						&lt;/article&gt;
+					</code></pre>
+				</div>
+
+				<div class="ex-code-arrow"></div>
+			</section><!--explainer-mod-->
+
 			<section class="section-mod">
-				<ul class="features">
-					<li class="feature">
-						<h3 class="headline-s">Good for front-end devs/designers</h3>
-						<p class="txt-s">
-						Twig's beautiful syntax makes it easy to build your HTML and CSS without limit. It's easy to swap in new HTML for different sites or themes. That's less copy-and-pasting-and-rewriting and more extensibility.
-						</p>
-					</li>
-					<li class="feature">
-						<h3 class="headline-s">Good for teams & sharing</h3>
-						<p class="txt-s">
-						Timber is built with teams of designers and developers in-mind. Not everyone knows the ins and outs of the_loop(), WordPress, and PHP. With Timber, your best WordPress dev can focus on the PHP, and your designers can work in much cleaner HTML markup.
-						</p>
-					</li>
-					<li class="feature">
-						<h3 class="headline-s">Good for WordPress!</h3>
-						<p class="txt-s">
-						WP sometimes gets a bad wrap because it's so easy to get started and make something (this is a good thing!). What if we could keep this shallow learning curve, but give other users a more solid platform to build on? 						Your new super-clean WordPress code will help you (and your clients) build-on the site for years to come.
-						</p>
-					</li>
+				<article>
+					<h4 class="section-h">Good for template designers</h4>
+					<p class="section-txt">Twig's beautiful syntax makes it easy to build your HTML and CSS without limit. It's easy to swap in new HTML for different sites or themes. That's less copy-and-pasting-and-rewriting and more extensibility.</p>
+				</article>
+				<article>
+					<h4 class="section-h">Good for teams</h4>
+					<p class="section-txt">Timber is built with teams of designers and developers in-mind. Not everyone knows the ins and outs of the_loop(), WordPress, and PHP. With Timber, your best WordPress dev can focus on the PHP, and your designers can work in much cleaner HTML markup.</p>
+				</article>
+				<article>
+					<h4 class="section-h">Good for everybody!</h4>
+					<p class="section-txt">Your new super-clean WordPress code will help you (and your clients) build-on the site for years to come. </p>
+				</article>
+			</section><!--explainer-mod-->
 
 
-
-
+			<section class="code-examples">
+				<h4 class="section-h">What does it look like?</h4>
+				<pre class="ui-block ui-block-1"><code class="php">
+					/* single.php */
+					$context = Timber::get_context();
+					$context['foo'] = 'Bar!';
+					$context['post'] = new TimberPost();
+					Timber::render('single.twig', $context);</code>
+				</pre>
+				<pre class="ui-block ui-block-2"><code class="twig">
+					{# single.twig #}
+					{% extends "base.twig" %}
+					&lt;h1 class="big-title"&gt;{{foo}}&lt;/h1&gt;
+					&lt;h2&gt;{{post.post_title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.get_thumbnail.get_src|resize(300, 300)}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.get_content}}<br/>					&lt;/div&gt;
+				</code>
+				</pre>
 			</section>
 
 			<section class="section-mod tech-features">
 				<h2 class="section-h1">Technical highlights</h2>
-				<article class="feature-info">
+				<article>
 					<h4 class="section-h">Object Oriented Posts, Terms, Users and More</h4>
 					<p class="section-txt">Speak to the common WordPress objects in a way that makes sense. Have you ever tried to get the thumbnail of a post? Don't lie to me, of course you have! It probably looked something like this:</p>
 					<div class="code-mod">
-						<div class="code-tag top">
-							The old way
-						</div>
 						<pre><code class="php">
 							$thumb_id = get_post_thumbnail_id($post->ID);
 							$url = wp_get_attachment_url($thumb_id);
@@ -207,26 +152,20 @@
 						</code></pre>
 					</div>
 					<p class="section-txt">
-						Yuk! Maybe you can remember all those functions, but I sure can't. If you're a pro WordPress dev you probably have a mess of shortcut functions to help you with a common task. But here's the rub YOUR shortcuts  are going different than everyone else's.
+						Yuk! Let's try it the Timber way...
 					</p>
 					<div class="code-mod">
-						<div class="code-tag top">
-							but with Timber
-						</div>
 						<pre><code class="twig">
 							{# single.twig #}
-							&lt;img src="{{post.thumbnail.src}}" alt="Thumbnail for {{post.title}}" /&gt;
+							&lt;img src="{{post.get_thumbnail.get_src}}" alt="Thumbnail for {{post.post_title}}" /&gt;
 						</code></pre>
 					</div>
 					<p class="section-txt">You can find the full <a href="https://github.com/jarednova/timber/wiki#object-documentation">object reference here</a>.</p>
 				</article>
-				<article class="feature-info">
+				<article>
 					<h4 class="section-h">Express/Node-style routing</h4>
 					<p class="section-txt">When I first used routes in Node.js I fell in love. But when I tried to do the same, WordPress broke my heart.</p>
 					<div class="code-mod">
-						<div class="code-tag top">
-							The old way
-						</div>
 						<pre><code class="php">
 							add_rewrite_rule('jobs/page/([0-9]+)?$', 'index.php?pagename=jobs&paged=$matches[1]', 'top' ); 
 						</code></pre>
@@ -234,9 +173,6 @@
 
 					<p class="section-txt">There's got to be a better way!</p>
 					<div class="code-mod">
-						<div class="code-tag top">
-							with Timber
-						</div>
 						<pre><code class="php">
 							Timber::add_route('jobs/list', function($params){
 									$query = 'posts_per_page=5&post_type=jobs';
@@ -251,27 +187,22 @@
 							});	
 						</code></pre>
 					</div>
-					<p class="section-txt">A few extra lines? Guilty! But clear as hell? You betcha. <a href="https://github.com/jarednova/timber/wiki/routes">Read more about Custom Routes</span></p>
+					<p class="section-txt">A few extra lines? Guilty! But clear as hell? You betcha.</p>
 
 				 
 				</article>
-				<article class="feature-info">
+				<article>
 					<h4 class="section-h">It's a library, not a Framework</h4>
 					<p class="section-txt">The tools I've come to rely on are the tools that evolve into your workflow. I didn't know I wanted to use jQuery or SASS until I started using them. Bit-by-bit they replaced the 'old' ways of doing things until I couldn't imagine life without them. Timber lets you start with just a bit. Say you want to just include an HTML snippet with a variable from your database:</p>
 					<div class="code-mod">
-						<div class="code-tag top">
-							<span class="muted">home</span>.php
-						</div>
 						<pre><code class="php">
+							/* home.php */
 							$data['welcome_message'] = get_option('welcome_message');
 							Timber::render('welcome.twig', $data);
 						</code></pre>
 					</div>
 
 					<div class="code-mod">
-						<div class="code-tag top">
-							<span class="muted">Inside your</span> twig <span class="muted">file</span>
-						</div>
 						<pre><code class="twig">
 							{# welcome.twig #}
 							&lt;p class="intro"&gt;{{welcome_message}}&lt;/p&gt;

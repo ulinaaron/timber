@@ -184,27 +184,7 @@ button {
 }
 
 
-/* ============================================= */
-/*	Header					   		*/ 
-/* ============================================= */ 
 
-header {
-	.logo {
-		display: block;
-		margin: 0 auto;
-		width:100%;
-		img {
-			width:100%;
-		}
-		
-	}
-}
-
-nav {
-	padding: 10px;
-	background-color: $med-green;
-	border-bottom: 1px dashed $light-green;
-}
 
 /* ============================================= */
 /*	Page Sections					   		*/ 
@@ -219,19 +199,6 @@ nav {
 	}
 }
 
-.section-mod {
-	margin: 40px 0 40px 0;
-	padding: 20px;
-
-	article {
-		margin: 0 0 40px 0;
-	}
-
-	@media (min-width: 600px){
-		width: 100%;
-		padding: 10px 12% 10px 12%;
-	}
-}
 
 /* ============================================= */
 /*	Top section					   		*/ 
@@ -289,19 +256,6 @@ nav {
 		}
 	}
 
-	.code-examples {
-		@media (min-width: 600px){
-			.ui-block-1 {
-				float: left;
-				width: 40%;
-			}
-
-			.ui-block-2 {
-				float: right;
-				width: 40%;
-			}
-		}
-	}
 }
 
 //inline styles for the code window
@@ -409,7 +363,6 @@ code {
 /* ============================================= */
 
 .code-sections, .code-examples {
-	margin: 20px; 
 
 	.ui-block {
 		background-color: $codeBlack;
@@ -486,3 +439,5 @@ html pre code {
 pre {
 	padding-top:0px;
 }
+
+@import "project/rebuild";
