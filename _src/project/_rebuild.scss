@@ -78,6 +78,9 @@
 	font-weight:700;
 	font-size:32px;
 	margin-bottom:30px;
+	@media (min-width:960px){
+		margin-bottom:45px;
+	}
 }
 
 .promo-stripe {
@@ -90,8 +93,7 @@
 		padding-right:20%;
 	}
 	@media (min-width:960px){
-		padding-left:0%;
-		padding-right:0%;
+		padding:35px 0% 55px;
 	}
 	.content-wrapper {
 		max-width:960px;

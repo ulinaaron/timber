@@ -1024,6 +1024,11 @@ pre {
   font-size: 32px;
   margin-bottom: 30px;
 }
+@media (min-width: 960px) {
+  .tagline {
+    margin-bottom: 45px;
+  }
+}
 
 .promo-stripe {
   background-color: #71a768;
@@ -1039,8 +1044,7 @@ pre {
 }
 @media (min-width: 960px) {
   .promo-stripe {
-    padding-left: 0%;
-    padding-right: 0%;
+    padding: 35px 0% 55px;
   }
 }
 .promo-stripe .content-wrapper {
