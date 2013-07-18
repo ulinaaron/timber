@@ -91,6 +91,20 @@
 	}
 }
 
+.endtag {
+	text-align:center;
+	font-family:$openSans;
+	font-size:24px;
+	font-weight:400;
+	color:$evergreen;
+	a {
+		font-weight:bold;
+		&:hover {
+			color:$bright-green;
+		}
+	}
+}
+
 .promo-stripe {
 	background-color:$med-green;
 	color:$whiteGreen;
