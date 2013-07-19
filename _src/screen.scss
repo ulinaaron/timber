@@ -178,9 +178,6 @@ button {
 	margin: 0 auto 20px auto;
 	padding: 10px;
 	@include border-radius(8px);
-
-	border-right: 1px dashed $light-green;
-	border-left: 1px dashed $light-green;
 	@include pie-clearfix;
 }
 
