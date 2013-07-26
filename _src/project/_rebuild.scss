@@ -35,6 +35,7 @@
 			width:25%;
 		}
 		.nav-main {
+			margin:auto;
 			float:left;
 			width:50%;
 		}
@@ -46,7 +47,8 @@
 }
 
 .nav-main {
-	margin:auto;
+	width:66%;
+	//margin:auto;
 	ul {
 		@include pie-clearfix;
 	}
@@ -61,15 +63,39 @@
 	@include background-image(linear-gradient(lighten($evergreen, 3), darken($evergreen, 0)));
 	display:block;
 	text-align:center;
-	height:32px;
+	height:28px;
 	padding:6px 7px;
 	color:$med-green;
 	font-family:$openSans;
 	font-weight:700;
-	font-size:15px;
+	font-size:12px;
 	border:1px solid;
 	border-color:rgba(black, .1) rgba(black, .1), rgba(black, .25);
 	@include border-radius(5px); 
+	i {
+		font-style:normal;
+	}
+	.mobile {
+			display:inline;
+	}
+	.desktop {
+		display:none;
+	}
+	@include trans(500ms, font-size);
+	@media (min-width:500px){
+		font-size:13px;
+		height:32px;
+		
+	}
+	@media (min-width:900px){
+		font-size:15px;
+		.mobile {
+			display:none;
+		}
+		.desktop {
+			display:inline;
+		}
+	}
 	&:hover {
 		color:$light-green;
 		background-color:lighten($evergreen, 10);
@@ -84,9 +110,11 @@
 	color:$evergreen;
 	font-family:$openSans;
 	font-weight:700;
-	font-size:32px;
+	font-size:24px;
 	margin-bottom:30px;
+	padding:0px 20px;
 	@media (min-width:960px){
+		font-size:32px;
 		margin-bottom:45px;
 	}
 }
@@ -136,13 +164,20 @@
 		.feature {
 			float:left;
 			width:33%;
+			border-bottom:0px;
+			padding-bottom:0px;
 		}
 	}
 }
 
 .feature {
 	text-align:center;
-	padding:0px 20px;
+	padding:0px 20px 20px;
+	margin-bottom:20px;
+	border-bottom:1px dashed $light-green;
+	&:last-child {
+		border-bottom:0px;
+	}
 }
 .headline-s {
 	font-family:$coustard;
@@ -164,8 +199,11 @@
 #main {
 	background-color:$whiteGreen;
 	@include box-shadow(0px 0px 10px rgba($evergreen, .6));
-	margin-top:-20px;
+	margin-top:-40px;
 	padding:60px 7%;
+	@media (min-width:960px){
+		margin-top:-60px;
+	}
 	.tagline {
 		font-size:24px;
 		text-align:left;
@@ -214,9 +252,9 @@
 }
 
 .code-side-by-side {
-	@include ui-grid-2(50%, 50%);
 	margin-bottom:20px;
-	@media (min-width:960px){
+	@media (min-width:768px){
+		@include ui-grid-2(50%, 50%);
 		code {
 			min-height:300px;
 		}
@@ -225,6 +263,10 @@
 
 .code-holder {
 	position:relative;
+	&:first-child {
+		z-index:100;
+		margin-bottom:10px;
+	}
 }
 
 code.php, code.twig {

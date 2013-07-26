@@ -119,7 +119,7 @@ Yeah baby!
 Let's crack open **index.php** and see what's inside:
 
 ```php
-$posts = PostMaster::loop_to_array();
+$posts = Timber::get_posts();
 $data['page_title'] = wp_title('|', false);
 $data['posts'] = $posts;
 $data['wp_title'] = WPHelper::get_wp_title();
