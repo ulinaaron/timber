@@ -294,7 +294,8 @@
 	font-family:$coustard;
 	font-weight:bold;
 	color:$med-green;
-	font-size:24px;
+	font-size:22px;
+	margin-bottom:4px;
 }
 
 .section-h1 {
@@ -311,6 +312,7 @@
 	font-family:$openSans;
 	font-size:15px;
 	line-height:23px;
+	font-weight:normal;
 	color:$textGreen;
 	a {
 		color:$med-green;
