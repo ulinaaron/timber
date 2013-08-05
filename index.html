@@ -161,8 +161,10 @@
 						<pre>
 							<code class="twig">
 								{% extends "base.twig" %}
+								{% block content %}
 								&lt;h1 class="big-title"&gt;{{foo}}&lt;/h1&gt;
 								&lt;h2&gt;{{post.title}}&lt;/h2&gt;<br/>					&lt;img src=&quot;{{post.thumbnail.src}}&quot; /&gt;<br/>					&lt;div class=&quot;body&quot;&gt;<br/>						   &nbsp;&nbsp;&nbsp;&nbsp; {{post.content}}<br/>					&lt;/div&gt;
+								{% endblock %}
 							</code>
 						</pre>
 						<div class="code-tag bottom">
