@@ -1350,3 +1350,8 @@ body {
 	top:20px;
 	opacity:.5;
 }
+
+.github-stripe {
+	z-index: 1000;
+	position:relative;
+}
