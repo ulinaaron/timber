@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Timber: WordPress with a Template Engine by Upstatement</title>
+		<title>WordPress Templates are broken! - WordCamp Providence 2013 - Jared Novack</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="author" content="Jared Novack">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -54,7 +54,10 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				
+				<section>
+					<h1>WordPress Templates Are Broken!</h1>
+					<h3 class="fragment">(But We Can Fix Them)</h3>
+				</section>
 				<section>
 					<h2><img src="images/upstatement-logo.png" class="naked"></h2>
 					<div class="fragment">
@@ -66,39 +69,24 @@
 				</section>
 
 				<section>
-					
-					<section>
-						<img src="images/about-upstatement.jpg" />
-					</section>
 
 					<section>
 						<img src="images/bglobe-ipad.png" class="naked" />
 					</section>
 
 					<section>
+						<img src="images/about-upstatement.jpg" />
+					</section>
+
+					<section>
 						<img src="images/newspapers.png" class="naked"/>
 					</section>
-
-					<section>
-						<img src="images/rh/quiz-end.png" />
-					</section>
-					<section>
-						<img src="images/rh/kwizzler-sort.png" />
-					</section>
-					<section>
-						<img src="images/rh/kwizzler-files.png" />
-					</section>
-					<section>
-						<img src="images/rh/producer-tools.png" />
-					</section>
-					
 				</section>
 
-
-
 				<section>
-					<h1>WordPress templates are broken!</h1>
-					<h3 class="fragment">But we can fix them</h3>
+					<h2>Don't just make things,<br />
+						<span class="fragment">
+					make things that make things</span></h2>
 				</section>
 
 				<section>
@@ -148,10 +136,12 @@
 
 				<section>
 					<img src="images/twentyten.png" />
+					<h3 class="tag">TwentyTen Theme</h3>
 				</section>
 
 				<section>
 					<img src="images/twentytwelve.png" />
+					<h3 class="tag">TwentyTwelve Theme</h3>
 				</section>
 
 				<section>
@@ -160,14 +150,16 @@
 				</section>
 
 				<section>
+					<h1>WordPress<span class="fragment">?</span></h1>
+					<h3 class="fragment">Oh that's cool. I guess.</h3>
+				</section>
+
+				<section>
 					<h3>Ruby on Rails</h3>
 					<h3 class="fragment">Django</h3>
 					<h3 class="fragment">Laravel/Symfony/Zend</h3>
 					<h3 class="fragment">Node.js</h3>
 					<h3 class="fragment">Yes, even Drupal</h3>
-					<aside class="notes">
-						this is why we get wordpress hate
-					</aside>
 				</section>
 
 				<section>
@@ -181,12 +173,17 @@
 				</section>
 
 				<section>
+					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;Hello World!&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>This is my sample post, right here.<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
+					</code></pre>
+				</section>
+
+				<section>
 					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;{{title}}&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>	{{body}}<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
 					</code></pre>
 				</section>
 
 				<section>
-					Wait a second.... 
+					Wait a second...
 				</section>
 
 				<section>
@@ -279,7 +276,6 @@
 					<section>
 						<img src="images/django.png" class="naked"  />
 					</section>
-
 				</section>
 
 				<section>
@@ -332,12 +328,21 @@
 					Upstatement.com <strong>single.twig</strong>
 				</section>
 
-				<section data-state="has-timber">
-					<h3>Documentation:</h3>
+				<section>
+					<h3>Twig Docs</h3>
 					<ul>
 						<li><a href="http://twig.sensiolabs.org/documentation">Twig Docs</a></li>
 						<li><a href="http://twig.sensiolabs.org/doc/templates.html">Twig for Template Designers</a></li>
 						<li><a href="http://blog.twig.sensiolabs.org/">Twig Blog (new feature doc)</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Timber Docs</h3>
+					<ul>
+						<li><a href="http://github.com/jarednova/timber">Timber on GitHub</a></li>
+						<li><a href="http://timber.upstatement.com">Timber Project Page</a></li>
+						<li><a href="http://www.wpmayor.com/articles/timber-templating-language-wordpress/">Blog post on WP Mayor</a></li>
 					</ul>
 				</section>
 
@@ -347,7 +352,7 @@
 
 				<section data-state="has-timber">
 					<h1><img src="images/timber-logo.png" class="naked" /></h1>
-					<h3>http://timber.upstatement.com</h3>
+					<h3><a href="http://timber.upstatement.com">http://timber.upstatement.com</a></h3>
 					<h4>@upstatement + @jaredNova</h4>
 				</section>
 
@@ -390,7 +395,7 @@
 			});
 
 		</script>
-		<a href="http://www.github.com/jarednova/timber/" class="agithub-stripe"><img style="position: absolute; top: 0; right: 0; border: 0;" src="../../_img/forkme.png" alt="Fork me on GitHub"></a>
+		<!--<a href="http://www.github.com/jarednova/timber/" class="agithub-stripe"><img style="position: absolute; top: 0; right: 0; border: 0;" src="../../_img/forkme.png" alt="Fork me on GitHub"></a>-->
 
 	</body>
 </html>
