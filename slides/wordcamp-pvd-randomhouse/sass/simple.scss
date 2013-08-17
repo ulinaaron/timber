@@ -180,9 +180,9 @@ img.naked , .reveal section img.naked{
 .css-grid {
 
   article {
-    width:20%;
+    width:(100%/6);
     float:left;
-    height:250px;
+    height:200px;
     h5 {
       font-size:14px;
       margin-top:-20px;
