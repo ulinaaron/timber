@@ -57,6 +57,9 @@
 				<section>
 					<h1>WordPress Templates Are Broken!</h1>
 					<h3 class="fragment">(But We Can Fix Them)</h3>
+					<aside class="notes">
+						But it's not all doom and gloom. I promise this is gonna be a fun presenation.
+					</aside>
 				</section>
 
 				<section>
@@ -77,13 +80,13 @@
 
 					<section>
 						<img src="images/newspapers.png" class="naked"/>
+						<aside class="notes">
+							But believe it or not, newspapers are not best place to do cutting-edge design + tech; at least in 2009
+						</aside>
 					</section>
 
 					<section>
 						<h2><img src="images/upstatement-logo.png" class="naked"></h2>
-						<div class="fragment">
-						<p>@Upstatement</p>
-						</div>
 					</section>
 
 					<section>
@@ -92,6 +95,9 @@
 
 					<section>
 						<img src="images/about-upstatement.jpg" />
+						<aside class="notes">
+							I'm gonna throw down some WordPress hate
+				    	</aside>
 					</section>
 
 				</section>
@@ -104,7 +110,7 @@
 				<section>
 					<h2>I <strong>love</strong> WordPress</h2>
 					<aside class="notes">
-						I'm gonna throw down some WordPress hate
+						I didn't always though, I started out using a difft CMS....
 				    </aside>
 				</section>
 
@@ -113,6 +119,10 @@
 					<aside class="notes">
 				     	For 6 months I was a hardcore Druapl dev
 				    </aside>
+				</section>
+
+				<section>
+					<img src="images/wc/dig-logo.png" class="naked" />
 				</section>
 
 				<section>
@@ -146,7 +156,7 @@
 					<h4 class="overline">Things to love about WordPress</h4>
 					<h3>The <em>best</em> community</h3>
 					<aside class="notes">
-				        I'm not a DrupalCamp Buffalo
+				        I'm not a DrupalCamp Buffalo, right? This weekend there's also a WC in Alberqure. These are places that tech conferences normally don't go. I sometimes don't realize this in Boston (or NY or SF) but it's awesome that WordPress holds events in these exotic llocations like Grand Rapids or Birmingham -- I saw one of hte speakers here organizes the Canton Ohio WordCamp.
 				    </aside>
 				</section>
 
@@ -175,12 +185,12 @@
 						<aside class="notes">
 							<ul>
 								<li>index.php</li>
-								<li class="fragment">home.php</li>
-								<li class="fragment">page.php</li>
-								<li class="fragment">page-about.php</li>
-								<li class="fragment">single.php</li>
-								<li class="fragment">single-portfolio.php</li>
-								<li class="fragment">archive-portfolio.php</li>
+								<li class="">home.php</li>
+								<li class="">page.php</li>
+								<li class="">page-about.php</li>
+								<li class="">single.php</li>
+								<li class="">single-portfolio.php</li>
+								<li class="">archive-portfolio.php</li>
 							</ul>
 						</aside>
 					</section>
@@ -198,11 +208,17 @@
 				<section>
 					<img src="images/twentytwelve.png" class="naked"/>
 					<h3 class="tag">TwentyTwelve Theme</h3>
+					<aside class="notes">
+						And when you see this stew of function calls and conditionals of PHP open/close tags of HTML. We have a word for this...
+					</aside>
 				</section>
 
 				<section>
 					<h4>We have a word for this...</h4>
 					<img class="fragment" src="images/spaghetti.jpg" />
+					<aside class="notes">
+						And this is what I think other developers when they think of WordPress. this is that top level of code that most interact with. So I live in Boston, specifically Cambrdige and when I'm out and introudce myself...
+					</aside>
 				</section>
 
 				<section>
@@ -241,11 +257,17 @@
 				<section>
 					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;Hello World!&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>This is my sample post, right here.<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
 					</code></pre>
+					<aside class="notes">
+						Everyone understands this right, just HTML. This is the "advanced" room.
+					</aside>
 				</section>
 
 				<section>
 					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;{{title}}&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>	{{body}}<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
 					</code></pre>
+					<aside class="notes">
+						Everyone understands this right, still good?
+					</aside>
 				</section>
 
 				<section>
@@ -257,7 +279,9 @@
 				</section>
 
 				<section>
-					<img src="images/singlehtml.png" />
+					<!-- <img src="images/singlehtml.png" /> -->
+					<pre><code contenteditable style="font-size: 28px; line-height:32px; margin-top: 20px;">&lt;div class=&quot;entry&quot;&gt;<br/>	&lt;h1&gt;{{post.title}}&lt;/h1&gt;	<br/>	&lt;div class=&quot;body&quot;&gt;<br/>	{{post.content}}<br/>	&lt;/div&gt;<br/>&lt;/div&gt;
+					</code></pre>
 				</section>
 
 				<section class="mvc-slide">
@@ -341,11 +365,15 @@
 					<section>
 						<img src="images/django.png" class="naked"  />
 					</section>
+
 				</section>
 
 				<section>
 					<h1 class="fragment"><img src="images/timber-logo.png" class="naked" /></h1>
 					<h3>Twig + WordPress</h3>
+					<aside class="notes">
+						The result is a plugin called...
+					</aside>
 				</section>
 
 				<section>
@@ -372,6 +400,13 @@
 						</div>
 					</div>
 					<aside class="notes">
+						2 files? isn't this twice as complicated?
+					</aside>
+				</section>
+
+				<section>
+					<h3>Seperation of Concerns</h3>
+					<aside class="notes">
 						So what is PHP good for?
 					</aside>
 				</section>
@@ -382,6 +417,7 @@
 						<li>Make a box</li>
 						<li class="fragment">Fill it with data</li>
 						<li class="fragment">Send it to the template</li>
+					</ol>
 				</section>
 
 				<section>
@@ -393,7 +429,7 @@
 				</section>
 
 				<section>
-					<img src="images/wc/bt-home-twig.png" class="naked" />
+					<img src="images/wc/bt-home-php.png" class="naked" />
 				</section>
 
 				<section>
@@ -500,7 +536,12 @@
 						<li><a href="http://github.com/jarednova/timber">Timber on GitHub</a></li>
 						<li><a href="http://timber.upstatement.com">Timber Project Page</a></li>
 						<li><a href="http://www.wpmayor.com/articles/timber-templating-language-wordpress/">Blog post on WP Mayor</a></li>
+						<li><a href="torquemag.io/what-is-wordpress-lacking-a-template-language/">Blog post on TorqueMag.io</a></li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>Star Timber on GitHub!</h3>
 				</section>
 
 				<section>
