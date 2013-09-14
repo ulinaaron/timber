@@ -62,6 +62,16 @@ body {
  	}
 }
 
+.reveal a, a {
+	text-decoration:none;
+	&:link, &:visited {
+		color:inherit;
+	}
+	&:hover {
+		color:$bright-green;
+	}
+}
+
 .reveal {
     font-family: $openSans;
     font-size: 32px;
