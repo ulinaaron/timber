@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
 	<title>Timber: WordPress + Twig</title>
 	<meta name="description" content="Build themes faster and easier using this WordPress Library from Upstatement featuring the Twig Template Language and Express-style routing ">
@@ -86,8 +86,8 @@
 
 	<header class="header">
 		<div class="logo-container">
-			<img class="logo mobile" src="_img/wood-banner-mobile.png" />
-			<img class="logo desktop" src="_img/wood-banner.png" />
+			<img class="logo mobile" src="_img/wood-banner-mobile.png" alt="Timber Logo for Mobile" />
+			<img class="logo desktop" src="_img/wood-banner.png" alt="Timber Logo" />
 			<a href="http://github.com/jarednova/timber/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="_img/forkme.png" alt="Fork me on GitHub"></a>
 		</div>
 
@@ -104,7 +104,7 @@
 					Use the <a href="#twig">Twig Template Language</a> to separate your HTML from PHP. This makes it easier to design with super-clean HTML-like syntax.
 				</p>
 				<div class="feature-icon-mod">
-					<img src="_img/_icons/saw.png" class="feature-icon-img" />
+					<img src="_img/_icons/saw.png" class="feature-icon-img" alt="Saw" />
 				</div>
 			</li>
 			<li class="feature">
@@ -113,16 +113,16 @@
 					Cut down on debugging time with clear <a href="#object-oriented">object oriented methods</a> for the WordPress tools you use most.
 				</p>
 				<div class="feature-icon-mod">
-					<img src="_img/_icons/axe.png" class="feature-icon-img" />
+					<img src="_img/_icons/axe.png" class="feature-icon-img" alt="Axe" />
 				</div>
 			</li>
 			<li class="feature">
 				<h3 class="headline-s">Build Bigger</h3>
 				<p class="txt-s">
-					Create more sites, share more code. Use features like <a href="#routing">Express-Style Routing</a> to make the WordPress site you’ve dreamed of.    
+					Create more sites, share more code. Use features like <a href="#routing">Express-Style Routing</a> to make the WordPress site you’ve dreamed of.
 				</p>
 				<div class="feature-icon-mod">
-					<img src="_img/_icons/chainsaw.png" class="feature-icon-img" />
+					<img src="_img/_icons/chainsaw.png" class="feature-icon-img" alt="Chainsaw" />
 				</div>
 			</li>
 		</ul>
@@ -205,10 +205,7 @@
 						WP sometimes gets a bad wrap because it's so easy to get started and make something (this is a good thing!). What if we could keep this shallow learning curve, but give other users a more solid platform to build on? 						Your new super-clean WordPress code will help you (and your clients) build-on the site for years to come.
 						</p>
 					</li>
-
-
-
-
+				</ul>
 			</section>
 
 			<section class="section-mod tech-features">
@@ -268,12 +265,11 @@
 									$query = 'posts_per_page=5&post_type=jobs&paged='.$params['pg'];
 									query_posts($query);
 									Timber::load_template('archive.php');
-							});	
+							});
 						</code></pre>
 					</div>
-					<p class="section-txt">A few extra lines? Guilty! But clear as hell? You betcha. <a href="https://github.com/jarednova/timber/wiki/routes">Read more about Custom Routes</span></p>
+					<p class="section-txt">A few extra lines? Guilty! But clear as hell? You betcha. <a href="https://github.com/jarednova/timber/wiki/routes">Read more about Custom Routes</a></p>
 
-				 
 				</article>
 				<article class="feature-info">
 					<h4 class="section-h">It's a library, not a Framework</h4>
