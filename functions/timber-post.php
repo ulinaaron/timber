@@ -39,6 +39,28 @@ class TimberPost extends TimberCore {
 		$this->import_info($pid);
 	}
 
+	public function __isset($name){
+		if (method_exists($this, $name)){
+			return false;
+		}
+		return true;
+	}
+
+	function __get($field){
+		if (function_exists('get_field')){
+			$result = get_field($field, $this->ID);
+			if (is_array($result)){
+				foreach ($result as &$res){
+					if (get_class($res) == 'WP_Post'){
+						$res = new TimberPost($res);
+					}
+				}
+			}
+			return $result;
+		}
+		return get_post_meta($this->ID, $field, true);
+	}
+
 	/**
 	*  Get the URL that will edit the current post/object
 	*/
@@ -174,20 +196,37 @@ class TimberPost extends TimberCore {
    * @param integer $pid a post ID number
    * @nodoc
    */
-	function import_custom($pid) {
-		$customs = get_post_custom($pid);
+
+  	function get_custom_via_acf(){
+  		if (function_exists('get_fields')){
+  			$customs = get_fields($this->ID);
+  			return $customs;
+  		}
+  	}
+
+  	function get_custom_via_wp(){
+  		$customs = get_post_custom($this->ID);
 		if (!is_array($customs)){
 			return;
 		}
+		$ret = new stdClass();
 		foreach ($customs as $key => $value) {
 			$v = $value[0];
-			$this->$key = $v;
+			$ret->$key = $v;
 			if (is_serialized($v)) {
 				if (gettype(unserialize($v)) == 'array') {
-					$this->$key = unserialize($v);
+					$ret->$key = unserialize($v);
 				}
 			}
 		}
+		return $ret;
+  	}
+
+	function get_custom($pid) {
+		if (function_exists('get_fields')){
+			return $this->get_custom_via_acf();
+		}
+		return $this->get_custom_via_wp();
 	}
 
 	/**
@@ -223,6 +262,8 @@ class TimberPost extends TimberCore {
 	function import_info($pid) {
 		$post_info = $this->get_info($pid);
 		$this->import($post_info);
+		//$post_custom = $this->get_custom($pid);
+		//$this->import($post_custom);
 	}
 
 	function get_parent() {
@@ -252,7 +293,7 @@ class TimberPost extends TimberCore {
 		}
 		$post->slug = $post->post_name;
 		$post->display_date = date(get_option('date_format'), strtotime($post->post_date));
-		$this->import_custom($post->ID);
+		
 		$post->status = $post->post_status;
 		if (!isset($wp_rewrite)) {
 			return $post;
