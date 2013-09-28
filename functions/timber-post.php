@@ -223,9 +223,9 @@ class TimberPost extends TimberCore {
   	}
 
 	function get_custom($pid) {
-		if (function_exists('get_fields')){
-			return $this->get_custom_via_acf();
-		}
+		// if (function_exists('get_fields')){
+		// 	return $this->get_custom_via_acf();
+		// }
 		return $this->get_custom_via_wp();
 	}
 
@@ -262,8 +262,8 @@ class TimberPost extends TimberCore {
 	function import_info($pid) {
 		$post_info = $this->get_info($pid);
 		$this->import($post_info);
-		//$post_custom = $this->get_custom($pid);
-		//$this->import($post_custom);
+		$post_custom = $this->get_custom($pid);
+		$this->import($post_custom);
 	}
 
 	function get_parent() {
