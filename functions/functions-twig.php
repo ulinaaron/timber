@@ -36,7 +36,17 @@ class TimberTwig {
 		$twig->addFilter('twitterfy', new Twig_Filter_Function(array('WPHelper', 'twitterify')));
 		$twig->addFilter('wp_body_class', new Twig_Filter_Function('twig_body_class'));
 		$twig->addFilter('wpautop', new Twig_Filter_Function('wpautop'));
-		
+
+		$twig->addFilter('TimberPost', new Twig_Filter_Function(function($pid){
+			if (!is_array($pid)){
+				return new TimberPost($pid);
+			}
+			$pids = $pid;
+			foreach($pids as &$pid){
+				$pid = new TimberPost($pid);
+			}
+			return $pids;
+		}));
 
 		$twig->addFunction('bloginfo', new Twig_SimpleFunction('bloginfo', function($show = '', $filter = 'raw'){
 			return get_bloginfo($show, $filter);
