@@ -363,8 +363,8 @@ class Timber {
     public static function add_route($route, $callback) {
         global $timber;
         if (!isset($timber->router)) {
-            require_once('router/Router.php');
-            require_once('router/Route.php');
+            require_once('functions/router/Router.php');
+            require_once('functions/router/Route.php');
             $timber->router = new Router();
             $timber->router->setBasePath('/');
         }
@@ -372,21 +372,23 @@ class Timber {
     }
 
     public function load_template($template, $query = false) {
-        if ($query) {
-            global $wp_query;
-            $wp_query = new WP_Query($query);
-        }
         $template = locate_template($template);
-        $GLOBALS['timber_template'] = $template;
-        add_action('send_headers', function () {
-            header('HTTP/1.1 200 OK');
-        });
-        add_action('wp_loaded', function ($template) {
-            if (isset($GLOBALS['timber_template'])) {
-                load_template($GLOBALS['timber_template']);
+
+        if ($query) {
+            add_action('do_parse_request',function() use ($query) {
+                global $wp;
+                $wp->query_vars = $query;
+                return false;
+            });
+        }
+        if ($template) {
+            add_action('wp_loaded', function() use ($template) {
+                wp();
+                do_action('template_redirect');
+                load_template($template);
                 die;
-            }
-        }, 10, 1);
+            });
+        }
     }
 
     /*  Pagination
