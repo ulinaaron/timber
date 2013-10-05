@@ -122,7 +122,7 @@ Let's crack open **index.php** and see what's inside:
 $posts = Timber::get_posts();
 $data['page_title'] = wp_title('|', false);
 $data['posts'] = $posts;
-$data['wp_title'] = WPHelper::get_wp_title();
+$data['wp_title'] = TimberHelper::get_wp_title();
 render_twig('index.html', $data);
 ```
 
